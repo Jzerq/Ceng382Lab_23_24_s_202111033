@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     padding: 0;
@@ -51,6 +52,32 @@ body {
     cursor: pointer;
 }
 
-.input-group input[type="submit"]:hover {
-    background-color: #45a049;
+
+
+.reservation-table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 2px solid black; 
+    margin: auto; 
+}
+
+.reservation-table td, .reservation-table th {
+    padding: 8px;
+    border: 1px solid black; /
+}
+
+.reservation-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.reservation-table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.reservation-table th {
+    text-align: center; 
+}
+
+.reservation-table tr:hover {
+    background-color: #eab9b9; 
 }
