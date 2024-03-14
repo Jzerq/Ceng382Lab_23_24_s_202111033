@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RkHWFUSKHZKrCyDUJf9qwHqW4bIek2MJhPgVUQJEv9Y=",
+  "Hash": "CsnQsquC9uIqbDds0rBEroQiLSYJyn8icoocowc3FYc=",
   "Source": "dotnetLab",
   "BasePath": "_content/dotnetLab",
   "Mode": "Default",
@@ -55,6 +55,25 @@
       "OriginalItemSpec": "/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/dotnetLab/obj/Debug/net8.0/scopedcss/projectbundle/dotnetLab.bundle.scp.css"
     },
     {
+      "Identity": "/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/dotnetLab/wwwroot/css/bootstrap.min.css",
+      "SourceId": "dotnetLab",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/dotnetLab/wwwroot/",
+      "BasePath": "_content/dotnetLab",
+      "RelativePath": "css/bootstrap.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/bootstrap.min.css"
+    },
+    {
       "Identity": "/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/dotnetLab/wwwroot/css/site.css",
       "SourceId": "dotnetLab",
       "SourceType": "Discovered",
@@ -91,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/dotnetLab/wwwroot/js/bootstrap.bundle.min.js",
+      "SourceId": "dotnetLab",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/dotnetLab/wwwroot/",
+      "BasePath": "_content/dotnetLab",
+      "RelativePath": "js/bootstrap.bundle.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/bootstrap.bundle.min.js"
     },
     {
       "Identity": "/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/dotnetLab/wwwroot/js/site.js",
