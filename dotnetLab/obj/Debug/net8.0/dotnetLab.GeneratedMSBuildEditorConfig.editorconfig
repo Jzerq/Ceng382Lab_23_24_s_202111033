@@ -9,39 +9,43 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = dotnetLab
 build_property.RootNamespace = dotnetLab
-build_property.ProjectDir = /Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/dotnetLab/
+build_property.ProjectDir = /Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/Ceng382Lab_23_24_s_202111033-1/dotnetLab/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/dotnetLab
+build_property.MSBuildProjectDirectory = /Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/Ceng382Lab_23_24_s_202111033-1/dotnetLab
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/dotnetLab/Pages/Error.cshtml]
+[/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/Ceng382Lab_23_24_s_202111033-1/dotnetLab/Pages/Ceng382Page.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2VuZzM4MlBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/Ceng382Lab_23_24_s_202111033-1/dotnetLab/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/dotnetLab/Pages/Index.cshtml]
+[/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/Ceng382Lab_23_24_s_202111033-1/dotnetLab/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/dotnetLab/Pages/Privacy.cshtml]
+[/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/Ceng382Lab_23_24_s_202111033-1/dotnetLab/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/dotnetLab/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/Ceng382Lab_23_24_s_202111033-1/dotnetLab/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/dotnetLab/Pages/_ViewImports.cshtml]
+[/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/Ceng382Lab_23_24_s_202111033-1/dotnetLab/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/dotnetLab/Pages/_ViewStart.cshtml]
+[/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/Ceng382Lab_23_24_s_202111033-1/dotnetLab/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/dotnetLab/Pages/Shared/_Layout.cshtml]
+[/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/Ceng382Lab_23_24_s_202111033-1/dotnetLab/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-22vgnzuj8r

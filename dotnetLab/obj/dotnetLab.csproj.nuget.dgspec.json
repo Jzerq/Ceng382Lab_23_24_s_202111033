@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/dotnetLab/dotnetLab.csproj": {}
+    "/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/Ceng382Lab_23_24_s_202111033-1/dotnetLab/dotnetLab.csproj": {}
   },
   "projects": {
-    "/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/dotnetLab/dotnetLab.csproj": {
+    "/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/Ceng382Lab_23_24_s_202111033-1/dotnetLab/dotnetLab.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/dotnetLab/dotnetLab.csproj",
+        "projectUniqueName": "/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/Ceng382Lab_23_24_s_202111033-1/dotnetLab/dotnetLab.csproj",
         "projectName": "dotnetLab",
-        "projectPath": "/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/dotnetLab/dotnetLab.csproj",
+        "projectPath": "/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/Ceng382Lab_23_24_s_202111033-1/dotnetLab/dotnetLab.csproj",
         "packagesPath": "/Users/dogukangundemir/.nuget/packages/",
-        "outputPath": "/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/dotnetLab/obj/",
+        "outputPath": "/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033/Ceng382Lab_23_24_s_202111033-1/dotnetLab/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/dogukangundemir/.nuget/NuGet/NuGet.Config"
