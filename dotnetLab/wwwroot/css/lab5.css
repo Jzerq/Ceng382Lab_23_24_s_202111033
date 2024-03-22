@@ -10,13 +10,14 @@
 }
 
 #CalculateForm {
+    font-weight: bold;
     margin: 50px auto; /* Center horizontally and provide spacing from the top */
     background-color: #f8f9fa; /* Background color */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center; /* Align text center */
-    color: #212529; /* Text color */
+    color: #3788da; /* Text color */
     max-width: 400px; /* Set a max-width for better readability */
 }
 

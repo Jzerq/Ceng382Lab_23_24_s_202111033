@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets/css/bootstrap.min.css"
     },
     {
+      "Id": "/Users/dogukangundemir/Desktop/ceng382/382/Ceng382Lab_23_24_s_202111033-2/dotnetLab/wwwroot/css/lab5.css",
+      "PackagePath": "staticwebassets/css/lab5.css"
+    },
+    {
       "Id": "/Users/dogukangundemir/Desktop/ceng382/382/Ceng382Lab_23_24_s_202111033-2/dotnetLab/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tF5/BFhlFC3cPDtSoCZ/okw2RK45r8BJKlgIFw/c7F0=",
+  "Hash": "bYUGlaPIGhsiAwliycOcjkvZ3xOfGK+k08/3ZST9JuE=",
   "Source": "dotnetLab",
   "BasePath": "_content/dotnetLab",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/bootstrap.min.css"
+    },
+    {
+      "Identity": "/Users/dogukangundemir/Desktop/ceng382/382/Ceng382Lab_23_24_s_202111033-2/dotnetLab/wwwroot/css/lab5.css",
+      "SourceId": "dotnetLab",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/dogukangundemir/Desktop/ceng382/382/Ceng382Lab_23_24_s_202111033-2/dotnetLab/wwwroot/",
+      "BasePath": "_content/dotnetLab",
+      "RelativePath": "css/lab5.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/lab5.css"
     },
     {
       "Identity": "/Users/dogukangundemir/Desktop/ceng382/382/Ceng382Lab_23_24_s_202111033-2/dotnetLab/wwwroot/css/site.css",
