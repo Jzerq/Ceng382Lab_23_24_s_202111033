@@ -11,8 +11,16 @@ function hidelements(){
    
 }
 function hidecal(){
-   
-   
+
+    let elt=document.getElementById("CalculateForm");
+    elt.style.visibility="visible";
+
+    if(elt.style.display=="block"){
+        elt.style.display="none";
+    }
+    else{
+        elt.style.display="block";
+    } 
 }
 
 
