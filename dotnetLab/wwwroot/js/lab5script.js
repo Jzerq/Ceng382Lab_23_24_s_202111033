@@ -1,12 +1,17 @@
 function hidelements(){
-    let elt=document.getElementById("PRicce");
-    var newText=document.createTextNode("toggling");
+    let elt1 = document.getElementById("id1");
+    let elt2 = document.getElementById("id2");
 
-    if(elt.style.display=="none"){
-        elt.style.display="block";
-    }
-    else{
-        elt.style.display="none";
+    if (elt1.style.display == "none" && elt2.style.display == "none") {
+        elt1.style.display = "block";
+        elt2.style.display = "block";
+        
+
+    } 
+    else {
+        elt1.style.display = "none";
+        elt2.style.display = "none";
+       
     }
    
 }

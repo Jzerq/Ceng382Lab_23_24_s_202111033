@@ -1,0 +1,26 @@
+.buttontoggle{
+    background-color: rgb(16, 126, 77);
+    border-radius: 12px;
+    width: 45%;
+    margin-right: 15px;
+
+}
+.buttontoggle:hover{
+    background-color: azure;
+}
+
+#CalculateForm {
+    margin: 50px auto; /* Center horizontally and provide spacing from the top */
+    background-color: #f8f9fa; /* Background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Align text center */
+    color: #212529; /* Text color */
+    max-width: 400px; /* Set a max-width for better readability */
+}
+
+#CalculateForm h1 {
+    font-size: 2.5em; /* Increase font size for calculator sign */
+    margin-bottom: 20px; /* Add margin below the heading */
+}
