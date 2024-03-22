@@ -11,17 +11,53 @@
 
 #CalculateForm {
     font-weight: bold;
-    margin: 50px auto; /* Center horizontally and provide spacing from the top */
-    background-color: #f8f9fa; /* Background color */
+    margin: 50px auto;
+    background-color: #f8f9fa; 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Align text center */
-    color: #3788da; /* Text color */
-    max-width: 400px; /* Set a max-width for better readability */
+    text-align: center;
+    color: #3788da; 
+    max-width: 400px; 
 }
 
 #CalculateForm h1 {
-    font-size: 2.5em; /* Increase font size for calculator sign */
-    margin-bottom: 20px; /* Add margin below the heading */
+    font-size: 2.5em; 
+    margin-bottom: 20px; 
+}
+
+
+
+#CalculateForm:hover {
+    transform: scale(1.05); 
+}
+
+#CalculateForm h1 {
+    font-size: 2.5em; 
+    margin-bottom: 20px; 
+}
+
+#CalculateForm input[type="number"],
+#CalculateForm button {
+    margin: 10px; 
+    padding: 10px; 
+    border: 1px solid #ced4da; 
+    border-radius: 5px; 
+}
+
+#CalculateForm input[type="number"]:focus,
+#CalculateForm button:focus {
+    outline: none;
+    border-color: #007bff; 
+}
+
+#CalculateForm button {
+    background-color: #007bff; 
+    color: white; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+#CalculateForm button:hover {
+    background-color: #0056b3; 
 }
