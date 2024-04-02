@@ -20,7 +20,7 @@ public class Room
     public string RoomName { get; set; }
 
     [JsonPropertyName("capacity")]
-    [JsonConverter(typeof(StringToIntConverter))] // Custom converter to convert string to int
+    [JsonConverter(typeof(StringToIntConverter))] 
     public int Capacity { get; set; }
 }
 
@@ -54,15 +54,44 @@ public class ReservationHandler : IReservationManager
 
     public void AddReservation(Reservation reservation)
     {
-        if (IsRoomAvailable(reservation.RoomId))
-        {
-            reservations.Add(reservation);
-            Console.WriteLine("Reservation added successfully.");
-        }
-        else
+        // Check if the room is available
+        if (!IsRoomAvailable(reservation.RoomId))
         {
             Console.WriteLine("Room capacity is full. Reservation not added.");
+            return;
         }
+
+        // Check if the reservation date is valid
+        if (!IsValidReservationDate(reservation.Dateday))
+        {
+            Console.WriteLine("Invalid reservation date. Reservation not added.");
+            return;
+        }
+
+        // Check if the reservation time is valid
+        if (!IsValidReservationTime(reservation.TimeSlot))
+        {
+            Console.WriteLine("Invalid reservation time. Reservation not added.");
+            return;
+        }
+
+     
+        if (!IsReservationDateInFuture(reservation.Dateday, reservation.TimeSlot))
+        {
+            Console.WriteLine("Cannot add reservation for past dates. Reservation not added.");
+            return;
+        }
+
+        // Check if there is already a reservation for the same date, time, and room
+        if (IsDuplicateReservation(reservation))
+        {
+            Console.WriteLine("Duplicate reservation found. Reservation not added.");
+            return;
+        }
+
+        // Add reservation
+        reservations.Add(reservation);
+        Console.WriteLine("Reservation added successfully.");
     }
 
     public void DeleteReservation(string roomId)
@@ -121,9 +150,33 @@ public class ReservationHandler : IReservationManager
     {
         return rooms.FirstOrDefault(r => r.RoomId == roomId);
     }
+
+    private bool IsValidReservationDate(string date)
+    {
+        return DateTime.TryParseExact(date, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out _);
+    }
+
+    private bool IsValidReservationTime(string time)
+    {
+        return TimeSpan.TryParseExact(time, @"hh\:mm", null, out _);
+    }
+
+    private bool IsReservationDateInFuture(string date, string time)
+    {
+        DateTime reservationDateTime = DateTime.Parse(date).Date + TimeSpan.Parse(time);
+        return reservationDateTime > DateTime.Now;
+    }
+
+    private bool IsDuplicateReservation(Reservation newReservation)
+    {
+        return reservations.Any(r =>
+            r.RoomId == newReservation.RoomId &&
+            r.Dateday == newReservation.Dateday &&
+            r.TimeSlot == newReservation.TimeSlot);
+    }
 }
 
-// Custom converter to convert string to int
+
 public class StringToIntConverter : JsonConverter<int>
 {
     public override int Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
@@ -228,10 +281,23 @@ class Program
         Console.WriteLine("Enter details for the reservation:");
         Console.Write("Day of week: ");
         string dayOfWeek = Console.ReadLine();
-        Console.Write("Reservation date(DD/MM/YYY): ");
-        string dateday = Console.ReadLine();
-        Console.Write("Time(Time format HH:MM): ");
-        string timeSlot = Console.ReadLine();
+        
+       
+        string dateday;
+        do
+        {
+            Console.Write("Reservation date (MM/DD/YYYY): ");
+            dateday = Console.ReadLine();
+        } while (!IsValidDateFormat(dateday));
+
+        
+        string timeSlot;
+        do
+        {
+            Console.Write("Time (Time format HH:MM): ");
+            timeSlot = Console.ReadLine();
+        } while (!IsValidTimeFormat(timeSlot));
+
         Console.Write("Reserver name: ");
         string reserverName = Console.ReadLine();
         Console.Write("Room ID: ");
@@ -243,7 +309,7 @@ class Program
             TimeSlot = timeSlot,
             ReserverName = reserverName,
             RoomId = roomId,
-            Dateday=dateday
+            Dateday = dateday
         };
 
         reservationManager.AddReservation(reservation);
@@ -263,5 +329,17 @@ class Program
         string roomId = Console.ReadLine();
 
         reservationManager.CheckReservation(roomId);
+    }
+
+    // Validate date format (DD/MM/YYYY)
+    static bool IsValidDateFormat(string date)
+    {
+        return DateTime.TryParseExact(date, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out _);
+    }
+
+    // Validate time format (HH:MM)
+    static bool IsValidTimeFormat(string time)
+    {
+        return TimeSpan.TryParseExact(time, @"hh\:mm", null, out _);
     }
 }
