@@ -1,0 +1,15 @@
+/Users/dogukangundemir/Desktop/ceng382/labs/Ceng382Lab_23_24_s_202111033-1/bin/Debug/net8.0/Ceng382Lab_23_24_s_202111033-1
+/Users/dogukangundemir/Desktop/ceng382/labs/Ceng382Lab_23_24_s_202111033-1/bin/Debug/net8.0/Ceng382Lab_23_24_s_202111033-1.deps.json
+/Users/dogukangundemir/Desktop/ceng382/labs/Ceng382Lab_23_24_s_202111033-1/bin/Debug/net8.0/Ceng382Lab_23_24_s_202111033-1.runtimeconfig.json
+/Users/dogukangundemir/Desktop/ceng382/labs/Ceng382Lab_23_24_s_202111033-1/bin/Debug/net8.0/Ceng382Lab_23_24_s_202111033-1.dll
+/Users/dogukangundemir/Desktop/ceng382/labs/Ceng382Lab_23_24_s_202111033-1/bin/Debug/net8.0/Ceng382Lab_23_24_s_202111033-1.pdb
+/Users/dogukangundemir/Desktop/ceng382/labs/Ceng382Lab_23_24_s_202111033-1/obj/Debug/net8.0/Ceng382Lab_23_24_s_202111033-1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dogukangundemir/Desktop/ceng382/labs/Ceng382Lab_23_24_s_202111033-1/obj/Debug/net8.0/Ceng382Lab_23_24_s_202111033-1.AssemblyInfoInputs.cache
+/Users/dogukangundemir/Desktop/ceng382/labs/Ceng382Lab_23_24_s_202111033-1/obj/Debug/net8.0/Ceng382Lab_23_24_s_202111033-1.AssemblyInfo.cs
+/Users/dogukangundemir/Desktop/ceng382/labs/Ceng382Lab_23_24_s_202111033-1/obj/Debug/net8.0/Ceng382Lab_23_24_s_202111033-1.csproj.CoreCompileInputs.cache
+/Users/dogukangundemir/Desktop/ceng382/labs/Ceng382Lab_23_24_s_202111033-1/obj/Debug/net8.0/Ceng382Lab_23_24_s_202111033-1.sourcelink.json
+/Users/dogukangundemir/Desktop/ceng382/labs/Ceng382Lab_23_24_s_202111033-1/obj/Debug/net8.0/Ceng382Lab_23_24_s_202111033-1.dll
+/Users/dogukangundemir/Desktop/ceng382/labs/Ceng382Lab_23_24_s_202111033-1/obj/Debug/net8.0/refint/Ceng382Lab_23_24_s_202111033-1.dll
+/Users/dogukangundemir/Desktop/ceng382/labs/Ceng382Lab_23_24_s_202111033-1/obj/Debug/net8.0/Ceng382Lab_23_24_s_202111033-1.pdb
+/Users/dogukangundemir/Desktop/ceng382/labs/Ceng382Lab_23_24_s_202111033-1/obj/Debug/net8.0/Ceng382Lab_23_24_s_202111033-1.genruntimeconfig.cache
+/Users/dogukangundemir/Desktop/ceng382/labs/Ceng382Lab_23_24_s_202111033-1/obj/Debug/net8.0/ref/Ceng382Lab_23_24_s_202111033-1.dll
