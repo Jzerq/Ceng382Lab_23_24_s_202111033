@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/dogukangundemir/Desktop/ceng382/labs/Ceng382Lab_23_24_s_202111033-1/Ceng382Lab_23_24_s_202111033-1.csproj",
+      "projectUniqueName": "/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033-1/Ceng382Lab_23_24_s_202111033-1.csproj",
       "projectName": "Ceng382Lab_23_24_s_202111033-1",
-      "projectPath": "/Users/dogukangundemir/Desktop/ceng382/labs/Ceng382Lab_23_24_s_202111033-1/Ceng382Lab_23_24_s_202111033-1.csproj",
+      "projectPath": "/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033-1/Ceng382Lab_23_24_s_202111033-1.csproj",
       "packagesPath": "/Users/dogukangundemir/.nuget/packages/",
-      "outputPath": "/Users/dogukangundemir/Desktop/ceng382/labs/Ceng382Lab_23_24_s_202111033-1/obj/",
+      "outputPath": "/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033-1/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/dogukangundemir/.nuget/NuGet/NuGet.Config"
