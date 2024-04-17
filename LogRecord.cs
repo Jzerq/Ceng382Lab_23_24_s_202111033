@@ -1,2 +1,7 @@
 // LogRecord.cs
-public record LogRecord(DateTime Timestamp, string ReserverName, string RoomName);
+public record LogRecord
+{
+    public DateTime Timestamp { get; init; }
+    public string ReserverName { get; init; }
+    public string RoomName { get; init; }
+}

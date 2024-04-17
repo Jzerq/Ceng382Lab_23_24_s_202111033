@@ -1,9 +1,9 @@
-// RoomHandler.cs
-using System.Collections.Generic;
+using System;
 using System.IO;
 using System.Text.Json;
+using Classes;
 
-public class RoomHandler
+public class RoomHandler 
 {
     private readonly string _roomFilePath;
 
@@ -12,27 +12,42 @@ public class RoomHandler
         _roomFilePath = roomFilePath;
     }
 
-    public List<Room> GetRooms()
+    public Room[] GetRooms()
     {
         try
         {
+            // Read room data from JSON file
             string jsonString = File.ReadAllText(_roomFilePath);
-            return JsonSerializer.Deserialize<List<Room>>(jsonString) ?? new List<Room>();
+
+            // Deserialize JSON to RoomData object
+            var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            var roomData = JsonSerializer.Deserialize<RoomData>(jsonString, options);
+
+            return roomData?.Rooms ?? Array.Empty<Room>();
         }
-        catch (FileNotFoundException)
+        catch (Exception ex)
         {
-            // Room file doesn't exist, return an empty list
-            return new List<Room>();
-        }
-        catch (JsonException)
-        {
-            // Error parsing room file, return an empty list
-            return new List<Room>();
+            Console.WriteLine($"Error reading room data: {ex.Message}");
+            return Array.Empty<Room>();
         }
     }
 
-    public void SaveRooms(List<Room> rooms)
+    public void SaveRooms(Room[] rooms)
     {
-        File.WriteAllText(_roomFilePath, JsonSerializer.Serialize(rooms));
+        try
+        {
+            // Create RoomData object
+            var roomData = new RoomData { Rooms = rooms };
+
+            // Serialize RoomData to JSON format
+            string jsonString = JsonSerializer.Serialize(roomData);
+
+            // Write JSON data to the room data file
+            File.WriteAllText(_roomFilePath, jsonString);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error saving room data: {ex.Message}");
+        }
     }
 }

@@ -2,6 +2,6 @@
 public interface IReservationRepository
 {
     void AddReservation(Reservation reservation);
-    void DeleteReservation(Reservation reservation);
+    void DeleteReservation(string roomId);
     List<Reservation> GetAllReservations();
 }

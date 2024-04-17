@@ -1,47 +1,29 @@
 // ReservationRepository.cs
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
-
 public class ReservationRepository : IReservationRepository
 {
-    private readonly string _reservationFilePath;
+    private List<Reservation> reservations;
 
-    public ReservationRepository(string reservationFilePath)
+    public ReservationRepository()
     {
-        _reservationFilePath = reservationFilePath;
+        reservations = new List<Reservation>();
     }
 
     public void AddReservation(Reservation reservation)
     {
-        var reservations = GetAllReservations();
         reservations.Add(reservation);
-        File.WriteAllText(_reservationFilePath, JsonSerializer.Serialize(reservations));
     }
 
-    public void DeleteReservation(Reservation reservation)
+    public void DeleteReservation(string roomId)
     {
-        var reservations = GetAllReservations();
-        reservations.Remove(reservation);
-        File.WriteAllText(_reservationFilePath, JsonSerializer.Serialize(reservations));
+        var reservationToRemove = reservations.FirstOrDefault(r => r.RoomId == roomId);
+        if (reservationToRemove != null)
+        {
+            reservations.Remove(reservationToRemove);
+        }
     }
 
     public List<Reservation> GetAllReservations()
     {
-        try
-        {
-            string jsonString = File.ReadAllText(_reservationFilePath);
-            return JsonSerializer.Deserialize<List<Reservation>>(jsonString) ?? new List<Reservation>();
-        }
-        catch (FileNotFoundException)
-        {
-            // Reservation file doesn't exist, return an empty list
-            return new List<Reservation>();
-        }
-        catch (JsonException)
-        {
-            // Error parsing reservation file, return an empty list
-            return new List<Reservation>();
-        }
+        return reservations;
     }
 }

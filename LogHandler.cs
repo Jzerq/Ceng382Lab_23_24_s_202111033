@@ -1,15 +1,15 @@
 // LogHandler.cs
 public class LogHandler
 {
-    private readonly ILogger _logger;
+    private ILogger logger;
 
     public LogHandler(ILogger logger)
     {
-        _logger = logger;
+        this.logger = logger;
     }
 
     public void AddLog(LogRecord log)
     {
-        _logger.Log(log);
+        logger.Log(log);
     }
 }

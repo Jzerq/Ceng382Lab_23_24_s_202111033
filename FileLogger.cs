@@ -14,34 +14,49 @@ public class FileLogger : ILogger
 
     public void Log(LogRecord log)
     {
-        var logs = new List<LogRecord>();
-
         try
         {
-            // Read existing logs from file, if any
-            string jsonString = File.ReadAllText(_logFilePath);
-            logs = JsonSerializer.Deserialize<List<LogRecord>>(jsonString) ?? new List<LogRecord>();
-        }
-        catch (FileNotFoundException)
-        {
-            // Log file doesn't exist, create an empty list
-        }
-        catch (JsonException)
-        {
-            // Error parsing log file, create an empty list
-        }
+            // Read existing logs from the file
+            List<LogRecord> logs = ReadLogsFromFile();
 
-        // Add new log entry
-        logs.Add(log);
+            // Add the new log
+            logs.Add(log);
 
-        try
-        {
-            // Write updated logs back to file
-            File.WriteAllText(_logFilePath, JsonSerializer.Serialize(logs));
+            // Serialize logs to JSON format
+            string jsonLogs = JsonSerializer.Serialize(logs);
+
+            // Write the JSON data to the log file
+            File.WriteAllText(_logFilePath, jsonLogs);
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error writing log to file: {ex.Message}");
+            Console.WriteLine($"Error logging to file: {ex.Message}");
+        }
+    }
+
+    private List<LogRecord> ReadLogsFromFile()
+    {
+        try
+        {
+            // Check if the log file exists
+            if (File.Exists(_logFilePath))
+            {
+                // Read existing JSON data from the log file
+                string jsonLogs = File.ReadAllText(_logFilePath);
+
+                // Deserialize JSON to List<LogRecord>
+                return JsonSerializer.Deserialize<List<LogRecord>>(jsonLogs) ?? new List<LogRecord>();
+            }
+            else
+            {
+                // Log file doesn't exist, return an empty list
+                return new List<LogRecord>();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error reading log file: {ex.Message}");
+            return new List<LogRecord>();
         }
     }
 }
