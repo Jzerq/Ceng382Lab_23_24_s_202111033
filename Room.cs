@@ -1,17 +1,13 @@
 using System.Text.Json.Serialization;
 
-namespace Classes
-{
-    public record Room
-    {
-        [JsonPropertyName("roomId")]
-        public string RoomId { get; init; }
+public record Room{
+    [JsonPropertyName("roomId")]
+    public string? roomId { get; init; }
 
-        [JsonPropertyName("roomName")]
-        public string RoomName { get; init; }
+    [JsonPropertyName("roomName")]
+    public string? roomName { get; init; }
 
-        [JsonPropertyName("capacity")]
-        [JsonConverter(typeof(StringToIntConverter))]
-        public int Capacity { get; init; }
-    }
+    [JsonPropertyName("capacity")]
+    public string? capacity { get; init; }
+
 }

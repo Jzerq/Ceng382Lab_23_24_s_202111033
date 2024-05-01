@@ -1,7 +1,6 @@
-// LogHandler.cs
 public class LogHandler
 {
-    private ILogger logger;
+    private readonly ILogger logger;
 
     public LogHandler(ILogger logger)
     {

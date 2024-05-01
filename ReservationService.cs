@@ -1,28 +1,24 @@
-using System;
-using Classes;
-
 public class ReservationService : IReservationService
 {
-    private IReservationManager reservationManager;
+    private readonly ReservationHandler reservationHandler;
 
-    public ReservationService(IReservationManager reservationManager)
+    public ReservationService(ReservationHandler reservationHandler)
     {
-        this.reservationManager = reservationManager;
+        this.reservationHandler = reservationHandler;
     }
 
-    public void AddReservation(Reservation reservation)
+    public void AddReservation(Reservation reservation, string roomId)
     {
-        reservationManager.AddReservation(reservation);
+        reservationHandler.addReservation(reservation, roomId);
     }
 
-    public void DeleteReservation(string roomId)
+    public void DeleteReservation(string roomId, DateTime date, DateTime time, string reserverName)
     {
-        reservationManager.DeleteReservation(roomId);
+        reservationHandler.deleteReservation(roomId, date, time, reserverName);
     }
 
     public void DisplayWeeklySchedule()
     {
-        
-        Console.WriteLine("Displaying Weekly Schedule...");
+        reservationHandler.displayWeeklySchedule();
     }
 }

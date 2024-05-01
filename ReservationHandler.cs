@@ -1,132 +1,161 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using Classes;
+using System.Text.Json;
 
-public class ReservationHandler : IReservationManager
+public class ReservationHandler
 {
-    private readonly Room[] rooms;
-    private readonly IReservationRepository reservationRepository;
-
-    public ReservationHandler(Room[] rooms, IReservationRepository reservationRepository)
+    private readonly List<Reservation>[][] reservations;
+    private readonly RoomData roomData;
+    private readonly ILogger logger;
+    
+    public ReservationHandler(RoomData roomData, ILogger logger)
     {
-        this.rooms = rooms;
-        this.reservationRepository = reservationRepository;
-    }
+        this.roomData = roomData;
+        this.logger = logger;
 
-    public void AddReservation(Reservation reservation)
-    {
-        if (!IsRoomAvailable(reservation.RoomId))
+        reservations = new List<Reservation>[7][];
+        for (int i = 0; i < 7; i++)
         {
-            Console.WriteLine("Room capacity is full. Reservation not added.");
-            return;
-        }
-
-        if (!IsValidReservationDate(reservation.Dateday))
-        {
-            Console.WriteLine("Invalid reservation date. Reservation not added.");
-            return;
-        }
-
-        if (!IsValidReservationTime(reservation.TimeSlot))
-        {
-            Console.WriteLine("Invalid reservation time. Reservation not added.");
-            return;
-        }
-
-        if (!IsReservationDateInFuture(reservation.Dateday, reservation.TimeSlot))
-        {
-            Console.WriteLine("Cannot add reservation for past dates. Reservation not added.");
-            return;
-        }
-
-        if (IsDuplicateReservation(reservation))
-        {
-            Console.WriteLine("Duplicate reservation found. Reservation not added.");
-            return;
-        }
-
-        reservationRepository.AddReservation(reservation);
-        Console.WriteLine("Reservation added successfully.");
-    }
-
-    public void DeleteReservation(string roomId)
-    {
-        reservationRepository.DeleteReservation(roomId);
-    }
-
-    public void CheckReservation(string roomId)
-    {
-        var roomReservations = reservationRepository.GetAllReservations().Where(r => r.RoomId == roomId).ToList();
-        if (roomReservations.Any())
-        {
-            Console.WriteLine($"Reservations for Room {roomId}:");
-            foreach (var reservation in roomReservations)
+            reservations[i] = new List<Reservation>[24];
+            for (int j = 0; j < 24; j++)
             {
-                Console.WriteLine($"Day: {reservation.DayOfWeek}, Time: {reservation.TimeSlot}, Reserved by: {reservation.ReserverName}, Reserved Date: {reservation.Dateday}");
+                reservations[i][j] = new List<Reservation>();
             }
         }
-        else
-        {
-            Console.WriteLine($"No reservations found for Room {roomId}.");
-        }
     }
 
-    public void DisplayReservations()
+    public bool IsRoomValid(string roomId)
     {
-        var allReservations = reservationRepository.GetAllReservations();
-        if (allReservations.Any())
+        foreach (var room in roomData.Rooms)
         {
-            Console.WriteLine("All Reservations:");
-            foreach (var reservation in allReservations)
-            {
-                var room = GetRoomById(reservation.RoomId);
-                Console.WriteLine($"Room ID: {room.RoomId}, Room Name: {room.RoomName}, Day: {reservation.DayOfWeek}, Reservation Date: {reservation.Dateday}, Time: {reservation.TimeSlot}, Reserved by: {reservation.ReserverName}");
-            }
-        }
-        else
-        {
-            Console.WriteLine("No reservations found.");
-        }
-    }
-
-    private bool IsRoomAvailable(string roomId)
-    {
-        var room = GetRoomById(roomId);
-        if (room != null)
-        {
-            int reservedCount = reservationRepository.GetAllReservations().Count(r => r.RoomId == roomId);
-            return reservedCount < room.Capacity;
+            if (room.roomId == roomId)
+                return true;
         }
         return false;
     }
 
+    public bool IsDateWithinCurrentWeek(DateTime date)
+    {
+        DateTime currentDate = DateTime.Now.Date;
+        DateTime startOfWeek = currentDate.AddDays(-(int)currentDate.DayOfWeek);
+        DateTime endOfWeek = startOfWeek.AddDays(6);
+        return date >= startOfWeek && date <= endOfWeek;
+    }
+
+    public RoomData RoomData { get => roomData; }
+
+    public void addReservation(Reservation reservation, string roomId)
+    {
+    
+        if (reservation.date < DateTime.Today)
+        {
+            Console.WriteLine("Cannot add reservation for a past date.");
+            return;
+        }
+
+        int dayOfWeek = (int)reservation.date.DayOfWeek;
+        int hourOfDay = reservation.time.Hour;
+
+       
+        bool isReservationExists = reservations[dayOfWeek][hourOfDay]
+            .Any(r => r.time == reservation.time && r.room.roomId == reservation.room.roomId);
+
+        if (isReservationExists)
+        {
+            Console.WriteLine("There is already a reservation for this time and room ID. Cannot add it.");
+            return;
+        }
+
+      
+        reservations[dayOfWeek][hourOfDay].Add(reservation);
+        Console.WriteLine("Reservation added successfully!\n");
+
+        LogRecord logRecord = new LogRecord(DateTime.Now, reservation.reserverName, "Added", reservation.room.roomId);
+        logger.Log(logRecord);
+
+        
+
+        
+    }
+
+    public void deleteReservation(string roomId, DateTime date, DateTime time, string reserverName)
+    {
+        if (!IsRoomValid(roomId))
+        {
+            Console.WriteLine("Invalid room ID!");
+            return;
+        }
+
+
+        if (date < DateTime.Today)
+        {
+            Console.WriteLine("Cannot delete reservation for a past date.");
+            return;
+        }
+
+        int dayOfWeek = (int)date.DayOfWeek;
+        int hourOfDay = time.Hour;
+
+        var matchingReservations = reservations[dayOfWeek][hourOfDay]
+            .Where(r => r.room.roomId == roomId && r.date == date && r.time == time && r.reserverName == reserverName)
+            .ToList();
+
+        var reservation = reservations[dayOfWeek][hourOfDay]
+            .FirstOrDefault(r => r.room.roomId == roomId
+                                && r.date.Date == date.Date
+                                && r.time.TimeOfDay == time.TimeOfDay
+                                && r.reserverName == reserverName);
+
+        if (reservation != null)
+        {
+            reservations[dayOfWeek][hourOfDay].Remove(reservation);
+            Console.WriteLine("Reservation deleted successfully!\n");
+
+      
+            LogRecord logRecord = new LogRecord(DateTime.Now, reserverName, "Deleted", reservation.room.roomId);
+            logger.Log(logRecord);
+            
+      
+        }
+        else
+        {
+            Console.WriteLine("The reservation does not exist.");
+        }
+    }
+
+    public void displayWeeklySchedule()
+    {
+        DateTime currentDate = DateTime.Now.Date;
+        DateTime startOfWeek = currentDate.AddDays(-(int)currentDate.DayOfWeek);
+        DateTime endOfWeek = startOfWeek.AddDays(6);
+
+        for (int dayOfWeek = 0; dayOfWeek < 7; dayOfWeek++)
+        {
+            for (int hourOfDay = 0; hourOfDay < 24; hourOfDay++)
+            {
+                foreach (var reservation in reservations[dayOfWeek][hourOfDay])
+                {
+                    Room room = GetRoomById(reservation.room.roomId);
+                    if (room != null)
+                    {
+                        Console.WriteLine($"  {reservation.date:yyyy-MM-dd}   {hourOfDay:00}:{reservation.time.Minute:00} - {room.roomName} - {reservation.reserverName}");
+                    }
+                }
+            }
+        }
+    }
+
     private Room GetRoomById(string roomId)
     {
-        return rooms.FirstOrDefault(r => r.RoomId == roomId);
+        foreach (var room in roomData.Rooms)
+        {
+            if (room.roomId == roomId)
+                return room;
+        }
+        return null;
     }
 
-    private bool IsValidReservationDate(string date)
-    {
-        return DateTime.TryParseExact(date, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out _);
-    }
-
-    private bool IsValidReservationTime(string time)
-    {
-        return TimeSpan.TryParseExact(time, @"hh\:mm", null, out _);
-    }
-
-    private bool IsReservationDateInFuture(string date, string time)
-    {
-        DateTime reservationDateTime = DateTime.Parse(date).Date + TimeSpan.Parse(time);
-        return reservationDateTime > DateTime.Now;
-    }
-
-    private bool IsDuplicateReservation(Reservation newReservation)
-    {
-        return reservationRepository.GetAllReservations().Any(r =>
-            r.RoomId == newReservation.RoomId &&
-            r.Dateday == newReservation.Dateday &&
-            r.TimeSlot == newReservation.TimeSlot);
-    }
+    
 }

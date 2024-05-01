@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/Users/dogukangundemir/.nuget/packages/": {}
+    "C:\\Users\\doguk\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033-1/Ceng382Lab_23_24_s_202111033-1.csproj",
+      "projectUniqueName": "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033\\Ceng382Lab_23_24_s_202111033-1.csproj",
       "projectName": "Ceng382Lab_23_24_s_202111033-1",
-      "projectPath": "/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033-1/Ceng382Lab_23_24_s_202111033-1.csproj",
-      "packagesPath": "/Users/dogukangundemir/.nuget/packages/",
-      "outputPath": "/Users/dogukangundemir/Desktop/ceng382/Ceng382Lab_23_24_s_202111033-1/obj/",
+      "projectPath": "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033\\Ceng382Lab_23_24_s_202111033-1.csproj",
+      "packagesPath": "C:\\Users\\doguk\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/dogukangundemir/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\doguk\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -64,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
