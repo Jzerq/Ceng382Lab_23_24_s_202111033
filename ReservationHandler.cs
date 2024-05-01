@@ -6,12 +6,15 @@ using System.Text.Json;
 
 public class ReservationHandler
 {
+    private readonly IReservationRepository _reservationRepository;
+
     private readonly List<Reservation>[][] reservations;
     private readonly RoomData roomData;
     private readonly ILogger logger;
     
-    public ReservationHandler(RoomData roomData, ILogger logger)
+    public ReservationHandler(RoomData roomData, ILogger logger,IReservationRepository reservationRepository)
     {
+        _reservationRepository = reservationRepository;
         this.roomData = roomData;
         this.logger = logger;
 
@@ -157,5 +160,4 @@ public class ReservationHandler
         return null;
     }
 
-    
 }

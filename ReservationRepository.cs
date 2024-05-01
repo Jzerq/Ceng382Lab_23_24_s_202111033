@@ -16,9 +16,8 @@ public class ReservationRepository : IReservationRepository
     {
         _reservations.RemoveAll(r => r.room.roomId == roomId && r.date == date && r.time == time && r.reserverName == reserverName);
     }
-
-    public List<Reservation> GetAllReservations()
-    {
-        return _reservations;
-    }
+    public List<Reservation> GetReservations()
+{
+    return _reservations;
+}
 }

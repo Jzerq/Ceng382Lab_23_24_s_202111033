@@ -10,6 +10,21 @@ public class FileLogger : ILogger
     {
         _logFilePath = logFilePath;
     }
+     public List<LogRecord> GetLogs()
+    {
+        try
+        {
+            var jsonString = File.ReadAllText(_logFilePath);
+            var logs = JsonSerializer.Deserialize<List<LogRecord>>(jsonString);
+            return logs;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error reading log file: {ex.Message}");
+            return new List<LogRecord>();
+        }
+    }
+
 
     public void Log(LogRecord log)
     {
