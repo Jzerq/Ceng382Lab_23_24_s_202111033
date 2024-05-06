@@ -1,0 +1,40 @@
+@page
+@model RoomListModel
+@{
+    ViewData["Title"] = "Room List";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if (Model.Rooms != null && Model.Rooms.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Room Name</th>
+                <th>Capacity</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var room in Model.Rooms)
+            {
+                <tr>
+                    <td>@room.Id</td>
+                    <td>@room.RoomName</td>
+                    <td>@room.Capacity</td>
+                    <td>
+                        <form method="post" asp-page-handler="Delete" asp-route-deleteId="@room.Id">
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this room?')">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No rooms available.</p>
+}
