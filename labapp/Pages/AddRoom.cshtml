@@ -4,18 +4,23 @@
     ViewData["Title"] = "Add Room";
 }
 
-<h1>Add Room</h1>
-
-<form method="post">
-    <div class="form-group">
-        <label asp-for="Room.RoomName" class="control-label"></label>
-        <input asp-for="Room.RoomName" class="form-control" />
-        <span asp-validation-for="Room.RoomName" class="text-danger"></span>
+<div class="card">
+    <div class="card-header">
+        <h1>Add Room</h1>
     </div>
-    <div class="form-group">
-        <label asp-for="Room.Capacity" class="control-label"></label>
-        <input asp-for="Room.Capacity" class="form-control" />
-        <span asp-validation-for="Room.Capacity" class="text-danger"></span>
+    <div class="card-body">
+        <form method="post">
+            <div class="mb-3">
+                <label asp-for="Room.RoomName" class="form-label"></label>
+                <input asp-for="Room.RoomName" class="form-control" />
+                <span asp-validation-for="Room.RoomName" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Room.Capacity" class="form-label"></label>
+                <input asp-for="Room.Capacity" class="form-control" />
+                <span asp-validation-for="Room.Capacity" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+        </form>
     </div>
-    <button type="submit" class="btn btn-primary">Add</button>
-</form>
+</div>

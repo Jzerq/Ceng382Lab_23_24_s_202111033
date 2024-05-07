@@ -4,11 +4,11 @@
     ViewData["Title"] = "Room List";
 }
 
-<h1>@ViewData["Title"]</h1>
+<h1 class="mb-4">Room List</h1>
 
 @if (Model.Rooms != null && Model.Rooms.Any())
 {
-    <table class="table">
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>ID</th>
@@ -28,6 +28,7 @@
                         <form method="post" asp-page-handler="Delete" asp-route-deleteId="@room.Id">
                             <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this room?')">Delete</button>
                         </form>
+                        <a href="EditRoom?id=@room.Id" class="btn btn-primary">Edit</a>
                     </td>
                 </tr>
             }

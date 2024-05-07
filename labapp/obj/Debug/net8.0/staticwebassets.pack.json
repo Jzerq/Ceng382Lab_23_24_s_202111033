@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\labapp.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-2\\labapp\\wwwroot\\css\\lab.css",
+      "PackagePath": "staticwebassets\\css\\lab.css"
+    },
+    {
       "Id": "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-2\\labapp\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
