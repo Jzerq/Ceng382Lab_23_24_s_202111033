@@ -58,6 +58,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-2/WebApp1/Pages/AddRoom.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkUm9vbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-2/WebApp1/Pages/EditRoom.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFJvb20uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-2/WebApp1/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -72,6 +80,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-2/WebApp1/Pages/ReservationService.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzZXJ2YXRpb25TZXJ2aWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-2/WebApp1/Pages/RoomList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9vbUxpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-2/WebApp1/Pages/Shared/_LoginPartial.cshtml]

@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
+
 namespace WebApp1.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]

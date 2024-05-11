@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0cKuXX7fZzV/tnp9sNdBasbYFidZ8+++SRjLfoIllLI=",
+  "Hash": "s8+JStqEA0oKwf7mRdu3eMiCCUOVk841bPwlrXgYkXQ=",
   "Source": "WebApp1",
   "BasePath": "_content/WebApp1",
   "Mode": "Default",
@@ -1193,6 +1193,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-2\\WebApp1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebApp1.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-2\\WebApp1\\wwwroot\\css\\lab.css",
+      "SourceId": "WebApp1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-2\\WebApp1\\wwwroot\\",
+      "BasePath": "_content/WebApp1",
+      "RelativePath": "css/lab.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\lab.css"
     },
     {
       "Identity": "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-2\\WebApp1\\wwwroot\\css\\site.css",
