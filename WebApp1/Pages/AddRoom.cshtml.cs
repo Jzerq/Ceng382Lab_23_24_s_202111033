@@ -30,6 +30,6 @@ public class AddRoomModel : PageModel
         _context.Rooms.Add(Room);
         await _context.SaveChangesAsync();
 
-        return RedirectToPage("./Index");
+        return RedirectToPage("./AddRoom");
     }
 }
