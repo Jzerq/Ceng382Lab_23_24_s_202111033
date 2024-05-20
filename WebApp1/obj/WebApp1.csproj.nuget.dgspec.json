@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-2\\WebApp1\\WebApp1.csproj": {}
+    "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-4\\WebApp1\\WebApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-2\\WebApp1\\WebApp1.csproj": {
+    "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-4\\WebApp1\\WebApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-2\\WebApp1\\WebApp1.csproj",
+        "projectUniqueName": "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-4\\WebApp1\\WebApp1.csproj",
         "projectName": "WebApp1",
-        "projectPath": "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-2\\WebApp1\\WebApp1.csproj",
+        "projectPath": "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-4\\WebApp1\\WebApp1.csproj",
         "packagesPath": "C:\\Users\\doguk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-2\\WebApp1\\obj\\",
+        "outputPath": "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-4\\WebApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\doguk\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -87,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

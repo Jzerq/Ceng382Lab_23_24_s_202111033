@@ -1,0 +1,25 @@
+@page
+@model CreateReservationModel
+@{
+    ViewData["Title"] = "Create Reservation";
+}
+
+<h1>Create Reservation</h1>
+
+<div class="card">
+    <div class="card-body">
+        <form method="post">
+            <div class="mb-3">
+                <label asp-for="Reservation.RoomId" class="form-label">Room</label>
+                <select asp-for="Reservation.RoomId" class="form-control" asp-items="Model.Rooms"></select>
+                <span asp-validation-for="Reservation.RoomId" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Reservation.DateTime" class="form-label">Date and Time</label>
+                <input asp-for="Reservation.DateTime" class="form-control" type="datetime-local"/>
+                <span asp-validation-for="Reservation.DateTime" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Create</button>
+        </form>
+    </div>
+</div>

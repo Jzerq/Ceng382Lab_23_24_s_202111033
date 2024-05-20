@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rmzagKNbQ4hLvufCI+D6GTYZv2P1VMylBnHD6jThK/Ty0AXCEOhQzNer5y8GaufrvfHg/un1zj06LCRjF/EcQQ==",
+  "dgSpecHash": "aHY+n2iBaDmybuAqtgd+jCLs1bxhdjqD1azd+EjSdaPvKthQYlKNbohIz5mfeib9GyMnbq92z7foovzJQ10lhQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-2\\WebApp1\\WebApp1.csproj",
+  "projectFilePath": "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-4\\WebApp1\\WebApp1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\doguk\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\doguk\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
