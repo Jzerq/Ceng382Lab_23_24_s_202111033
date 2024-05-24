@@ -1,0 +1,26 @@
+@page
+@model FavoritesModel
+@{
+    ViewData["Title"] = "Favorites";
+    ViewData["BodyClass"] = "favorites";
+}
+
+<h1>Favorites</h1>
+
+<ul class="list-group">
+@foreach (var favorite in Model.Favorites)
+{
+    <li class="list-group-item">
+        @favorite.Title
+        <a asp-page="/Challenges/Details" asp-route-id="@favorite.Id" class="btn btn-info btn-sm ml-2">Details</a>
+    </li>
+}
+</ul>
+
+<style>
+    .favorites {
+        background-image: url('/images/favorites-background.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+</style>

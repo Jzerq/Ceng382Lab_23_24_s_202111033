@@ -1,0 +1,36 @@
+@page
+@model FitnessChallengeApp.Pages.GeneralLeaderboardModel
+@{
+    ViewData["Title"] = "General Leaderboard";
+    ViewData["BodyClass"] = "leaderboard";
+}
+
+<h1>General Leaderboard</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Rank</th>
+            <th>Username</th>
+            <th>Total Points</th>
+        </tr>
+    </thead>
+    <tbody>
+    @for (int i = 0; i < Model.Leaderboard.Count; i++)
+    {
+        <tr>
+            <td>@(i + 1)</td>
+            <td>@Model.Leaderboard[i].Username</td>
+            <td>@Model.Leaderboard[i].TotalPoints</td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<style>
+    .leaderboard {
+        background-image: url('/images/leaderboard-background.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+</style>

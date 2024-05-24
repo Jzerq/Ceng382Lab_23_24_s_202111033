@@ -16,6 +16,7 @@ html {
   position: relative;
   min-height: 100%;
 }
+
 body {
   font-family: Arial, sans-serif;
   color: #333;
@@ -78,7 +79,6 @@ input, textarea, select {
   width: 100%;
 }
 
-/* Backgrounds for different pages */
 .body-home {
   background-image: url('/images/home-background.png');
   background-size: cover;
@@ -121,48 +121,44 @@ input, textarea, select {
   background-attachment: fixed;
 }
 
-.box-shadow {
-box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+.body-service-menu {
+  background-image: url('/images/service-menu-background.png');
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-button.accept-policy {
-font-size: 1rem;
-line-height: inherit;
+.card {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ccc;
 }
 
-.footer {
-position: absolute;
-bottom: 0;
-width: 100%;
-white-space: nowrap;
-line-height: 60px;
-}
-
-a.navbar-brand {
-white-space: normal;
-text-align: center;
-word-break: break-all;
-}
-
-a {
-color: #0077cc;
+.card-title {
+  color: #333;
 }
 
 .btn-primary {
-color: #fff;
-background-color: #1b6ec2;
-border-color: #1861ac;
+  background-color: #007bff;
+  border-color: #007bff;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-color: #fff;
-background-color: #1b6ec2;
-border-color: #1861ac;
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
 }
 
-.border-top {
-border-top: 1px solid #e5e5e5;
+.login-page {
+  background-image: url('/images/login-background.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.border-bottom {
-border-bottom: 1px solid #e5e5e5;
+
+.login-form {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

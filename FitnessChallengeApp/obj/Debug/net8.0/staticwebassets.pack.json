@@ -13,6 +13,38 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-5\\FitnessChallengeApp\\wwwroot\\images\\challenges-background.png",
+      "PackagePath": "staticwebassets\\images\\challenges-background.png"
+    },
+    {
+      "Id": "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-5\\FitnessChallengeApp\\wwwroot\\images\\favorites-background.png",
+      "PackagePath": "staticwebassets\\images\\favorites-background.png"
+    },
+    {
+      "Id": "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-5\\FitnessChallengeApp\\wwwroot\\images\\home-background.png",
+      "PackagePath": "staticwebassets\\images\\home-background.png"
+    },
+    {
+      "Id": "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-5\\FitnessChallengeApp\\wwwroot\\images\\leaderboard-background.png",
+      "PackagePath": "staticwebassets\\images\\leaderboard-background.png"
+    },
+    {
+      "Id": "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-5\\FitnessChallengeApp\\wwwroot\\images\\login-background.png",
+      "PackagePath": "staticwebassets\\images\\login-background.png"
+    },
+    {
+      "Id": "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-5\\FitnessChallengeApp\\wwwroot\\images\\profile-background.png",
+      "PackagePath": "staticwebassets\\images\\profile-background.png"
+    },
+    {
+      "Id": "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-5\\FitnessChallengeApp\\wwwroot\\images\\register-background.png",
+      "PackagePath": "staticwebassets\\images\\register-background.png"
+    },
+    {
+      "Id": "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-5\\FitnessChallengeApp\\wwwroot\\images\\service-menu-background.png",
+      "PackagePath": "staticwebassets\\images\\service-menu-background.png"
+    },
+    {
       "Id": "C:\\Users\\doguk\\OneDrive\\Masaüstü\\dotnmetlab\\Ceng382Lab_23_24_s_202111033-5\\FitnessChallengeApp\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

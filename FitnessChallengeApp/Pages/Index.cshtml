@@ -1,10 +1,21 @@
-﻿@page
+﻿
+@page
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    ViewData["BodyClass"] = "home";
 }
 
+
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome to FitnessChallengeApp</h1>
+    <p>Join and compete in fitness challenges to stay motivated and track your progress.</p>
 </div>
+
+<style>
+    .home {
+        background-image: url('/images/home-background.png');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+</style>

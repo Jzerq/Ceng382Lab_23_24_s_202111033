@@ -1,0 +1,28 @@
+@page "{id:int}"
+@model FitnessChallengeApp.Pages.Challenges.JoinModel
+@{
+    ViewData["Title"] = "Join Challenge";
+    ViewData["BodyClass"] = "challenges";
+}
+
+<h1>Join Challenge</h1>
+
+<h3>Are you sure you want to join this challenge?</h3>
+<div>
+    <h4>@Model.Challenge.Title</h4>
+    <p>@Model.Challenge.Description</p>
+</div>
+
+<form method="post">
+    <input type="hidden" asp-for="Challenge.Id" />
+    <button type="submit" class="btn btn-success">Join</button>
+    <a asp-page="/Challenges/Index" class="btn btn-secondary">Cancel</a>
+</form>
+
+<style>
+    .challenges {
+        background-image: url('/images/challenges-background.png');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+</style>

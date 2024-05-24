@@ -1,0 +1,35 @@
+@page "{id:int}"
+@model FitnessChallengeApp.Pages.Challenges.DetailsModel
+@{
+    ViewData["Title"] = "Challenge Details";
+    ViewData["BodyClass"] = "challenges";
+}
+
+<h1>@Model.Challenge.Title</h1>
+<p>@Model.Challenge.Description</p>
+<p>Category: @Model.Challenge.Category</p>
+<p>Difficulty: @Model.Challenge.DifficultyLevel</p>
+
+<h2>Leaderboard</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Rank</th>
+            <th>Username</th>
+            <th>Points</th>
+        </tr>
+    </thead>
+    <tbody>
+    @for (int i = 0; i < Model.Leaderboard.Count; i++)
+    {
+        <tr>
+            <td>@(i + 1)</td>
+            <td>@Model.Leaderboard[i].Username</td>
+            <td>@Model.Leaderboard[i].Points</td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<a asp-page="/Challenges/Join" asp-route-id="@Model.Challenge.Id" class="btn btn-success">Join Challenge</a>
+<a asp-page="/Challenges/Leave" asp-route-id="@Model.Challenge.Id" class="btn btn-secondary">Leave Challenge</a>

@@ -26,12 +26,80 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\doguk\OneDrive\Masaüstü\dotnmetlab\Ceng382Lab_23_24_s_202111033-5\FitnessChallengeApp
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-5/FitnessChallengeApp/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-5/FitnessChallengeApp/Areas/Identity/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-5/FitnessChallengeApp/Areas/Identity/Pages/Account/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-5/FitnessChallengeApp/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-5/FitnessChallengeApp/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-5/FitnessChallengeApp/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-5/FitnessChallengeApp/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-5/FitnessChallengeApp/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-5/FitnessChallengeApp/Leaderboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = TGVhZGVyYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-5/FitnessChallengeApp/Pages/Challenges/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhbGxlbmdlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-5/FitnessChallengeApp/Pages/Challenges/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhbGxlbmdlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-5/FitnessChallengeApp/Pages/Challenges/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhbGxlbmdlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-5/FitnessChallengeApp/Pages/Challenges/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhbGxlbmdlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-5/FitnessChallengeApp/Pages/Challenges/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhbGxlbmdlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-5/FitnessChallengeApp/Pages/Challenges/Join.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhbGxlbmdlc1xKb2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-5/FitnessChallengeApp/Pages/Challenges/Leave.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhbGxlbmdlc1xMZWF2ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-5/FitnessChallengeApp/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-5/FitnessChallengeApp/Pages/Favorites.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmF2b3JpdGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-5/FitnessChallengeApp/Pages/GeneralLeaderboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2VuZXJhbExlYWRlcmJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-5/FitnessChallengeApp/Pages/Index.cshtml]
@@ -40,6 +108,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-5/FitnessChallengeApp/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-5/FitnessChallengeApp/Pages/ServiceMenu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VydmljZU1lbnUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-5/FitnessChallengeApp/Pages/Shared/_LoginPartial.cshtml]
