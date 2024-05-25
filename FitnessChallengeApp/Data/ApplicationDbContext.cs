@@ -16,5 +16,6 @@ namespace FitnessChallengeApp.Data
         public DbSet<UserRating> UserRatings { get; set; }
         public DbSet<UserChallenge> UserChallenges { get; set; }
         public DbSet<Favorite> Favorites { get; set; }
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
     }
 }

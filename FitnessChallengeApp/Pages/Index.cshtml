@@ -1,15 +1,52 @@
-﻿
-@page
+﻿@page
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
     ViewData["BodyClass"] = "home";
 }
 
+<div class="container text-center mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="display-4 welcome-header">Welcome to FitnessChallengeApp</h1>
+                    <p class="lead">Join and compete in fitness challenges to stay motivated and track your progress.</p>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to FitnessChallengeApp</h1>
-    <p>Join and compete in fitness challenges to stay motivated and track your progress.</p>
+                    <div class="row mt-4">
+                        <div class="col-md-4">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title section-header">Explore Challenges</h5>
+                                    <p class="card-text">Browse through a variety of fitness challenges to find one that suits your goals.</p>
+                                    <a href="/Challenges/Index" class="btn btn-primary">View Challenges</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title section-header">Track Your Progress</h5>
+                                    <p class="card-text">Keep track of your performance and see how you stack up against others.</p>
+                                    <a href="/GeneralLeaderboard" class="btn btn-primary">View Leaderboard</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title section-header">Manage Your Profile</h5>
+                                    <p class="card-text">Update your bio, change your profile picture, and manage your personal information.</p>
+                                    <a href="/Identity/Account/Manage" class="btn btn-primary">Go to Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <style>
@@ -17,5 +54,48 @@
         background-image: url('/images/home-background.png');
         background-size: cover;
         background-attachment: fixed;
+        color: #40E0D0; /* Turquoise color for text */
+    }
+
+    .container {
+        background-color: rgba(0, 0, 0, 0.75);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.9);
+        border: none;
+        margin-bottom: 20px;
+    }
+
+    .card-title {
+        color: #007bff;
+        font-weight: bold;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+
+    .welcome-header {
+        font-weight: bold;
+        color: #04055a; 
+    }
+
+    .section-header {
+        font-weight: bold;
+        color: #04055a; /* OrangeRed color for section headers */
+    }
+
+    .lead, .card-text {
+        color: #40E0D0; /* Turquoise color for text */
     }
 </style>

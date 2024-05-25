@@ -19,22 +19,24 @@ html {
 
 body {
   font-family: Arial, sans-serif;
-  color: #333;
+  color: #222;
+  background-color: #f8f9fa; /* Light background for contrast */
 }
 
 h1, h2, h3 {
-  color: #444;
+  color: #222;
+  font-weight: bold;
 }
 
 form {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 button {
-  background-color: #007bff;
+  background-color: #343a40;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -43,35 +45,37 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #495057;
 }
 
 input, textarea, select {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #333;
   border-radius: 5px;
+  background-color: #e9ecef;
+  color: #222;
 }
 
 .navbar {
-  background-color: #007bff;
+  background-color: #343a40;
   padding: 10px;
 }
 
 .navbar a {
-  color: white;
+  color: #f8f9fa;
   padding: 10px;
   text-decoration: none;
 }
 
 .navbar a:hover {
-  background-color: #0056b3;
+  background-color: #495057;
 }
 
 .footer {
-  background-color: #007bff;
-  color: white;
+  background-color: #343a40;
+  color: #f8f9fa;
   text-align: center;
   padding: 10px;
   position: fixed;
@@ -128,12 +132,13 @@ input, textarea, select {
 }
 
 .card {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid #ccc;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid #333;
+  color: #f8f9fa;
 }
 
 .card-title {
-  color: #333;
+  color: #f8f9fa;
 }
 
 .btn-primary {
@@ -157,8 +162,9 @@ input, textarea, select {
 }
 
 .login-form {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.8);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  color: #f8f9fa;
 }
