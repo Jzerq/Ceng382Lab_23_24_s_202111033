@@ -261,3 +261,7 @@ C:\Users\doguk\OneDrive\Masaüstü\dotnmetlab\Ceng382Lab_23_24_s_202111033-5\Fit
 C:\Users\doguk\OneDrive\Masaüstü\dotnmetlab\Ceng382Lab_23_24_s_202111033-5\FitnessChallengeApp\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\doguk\OneDrive\Masaüstü\dotnmetlab\Ceng382Lab_23_24_s_202111033-5\FitnessChallengeApp\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\doguk\OneDrive\Masaüstü\dotnmetlab\Ceng382Lab_23_24_s_202111033-5\FitnessChallengeApp\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\doguk\OneDrive\Masaüstü\dotnmetlab\Ceng382Lab_23_24_s_202111033-5\FitnessChallengeApp\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\doguk\OneDrive\Masaüstü\dotnmetlab\Ceng382Lab_23_24_s_202111033-5\FitnessChallengeApp\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\doguk\OneDrive\Masaüstü\dotnmetlab\Ceng382Lab_23_24_s_202111033-5\FitnessChallengeApp\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\doguk\OneDrive\Masaüstü\dotnmetlab\Ceng382Lab_23_24_s_202111033-5\FitnessChallengeApp\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll

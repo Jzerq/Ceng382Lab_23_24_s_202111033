@@ -1,11 +1,12 @@
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 using FitnessChallengeApp.Data;
 using FitnessChallengeApp.Models;
-using System;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace FitnessChallengeApp.Pages.Challenges
 {
@@ -13,12 +14,10 @@ namespace FitnessChallengeApp.Pages.Challenges
     public class EditModel : PageModel
     {
         private readonly ApplicationDbContext _context;
-        private readonly UserManager<ApplicationUser> _userManager;
 
-        public EditModel(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
+        public EditModel(ApplicationDbContext context)
         {
             _context = context;
-            _userManager = userManager;
         }
 
         [BindProperty]
@@ -26,7 +25,6 @@ namespace FitnessChallengeApp.Pages.Challenges
 
         public async Task<IActionResult> OnGetAsync(int id)
         {
-            ViewData["BodyClass"] = "challenges";
             Challenge = await _context.Challenges.FindAsync(id);
 
             if (Challenge == null)
@@ -34,8 +32,8 @@ namespace FitnessChallengeApp.Pages.Challenges
                 return NotFound();
             }
 
-            var user = await _userManager.GetUserAsync(User);
-            if (Challenge.CreatedBy != user.Id)
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (!_context.UserChallenges.Any(uc => uc.ChallengeId == id && uc.UserId == userId))
             {
                 return Forbid();
             }
@@ -50,27 +48,30 @@ namespace FitnessChallengeApp.Pages.Challenges
                 return Page();
             }
 
-            var challenge = await _context.Challenges.FindAsync(Challenge.Id);
+            _context.Attach(Challenge).State = EntityState.Modified;
 
-            if (challenge == null)
+            try
             {
-                return NotFound();
+                await _context.SaveChangesAsync();
             }
-
-            var user = await _userManager.GetUserAsync(User);
-            if (challenge.CreatedBy != user.Id)
+            catch (DbUpdateConcurrencyException)
             {
-                return Forbid();
+                if (!ChallengeExists(Challenge.Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
             }
-
-            challenge.Title = Challenge.Title;
-            challenge.Description = Challenge.Description;
-            challenge.Category = Challenge.Category;
-            challenge.DifficultyLevel = Challenge.DifficultyLevel;
-
-            await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
+        }
+
+        private bool ChallengeExists(int id)
+        {
+            return _context.Challenges.Any(e => e.Id == id);
         }
     }
 }

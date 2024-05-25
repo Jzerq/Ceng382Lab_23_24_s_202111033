@@ -1,34 +1,26 @@
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using FitnessChallengeApp.Data;
 using FitnessChallengeApp.Models;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-
-
 namespace FitnessChallengeApp.Pages.Challenges
 {
-    [Authorize]
     public class LeaveModel : PageModel
     {
         private readonly ApplicationDbContext _context;
-        private readonly UserManager<ApplicationUser> _userManager;
 
-        public LeaveModel(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
+        public LeaveModel(ApplicationDbContext context)
         {
             _context = context;
-            _userManager = userManager;
         }
 
-        [BindProperty]
         public Challenge Challenge { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int id)
         {
-            ViewData["BodyClass"] = "challenges";
             Challenge = await _context.Challenges.FindAsync(id);
 
             if (Challenge == null)
@@ -41,9 +33,10 @@ namespace FitnessChallengeApp.Pages.Challenges
 
         public async Task<IActionResult> OnPostAsync(int id)
         {
-            var user = await _userManager.GetUserAsync(User);
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
             var userChallenge = await _context.UserChallenges
-                .FirstOrDefaultAsync(uc => uc.ChallengeId == id && uc.UserId == user.Id);
+                .FirstOrDefaultAsync(uc => uc.ChallengeId == id && uc.UserId == userId);
 
             if (userChallenge != null)
             {
@@ -51,7 +44,7 @@ namespace FitnessChallengeApp.Pages.Challenges
                 await _context.SaveChangesAsync();
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("/Challenges/Index");
         }
     }
 }

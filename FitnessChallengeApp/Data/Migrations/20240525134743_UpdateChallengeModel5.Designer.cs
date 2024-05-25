@@ -4,6 +4,7 @@ using FitnessChallengeApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FitnessChallengeApp.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240525134743_UpdateChallengeModel5")]
+    partial class UpdateChallengeModel5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -183,8 +186,6 @@ namespace FitnessChallengeApp.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ChallengeId");
-
                     b.ToTable("UserChallenges");
                 });
 
@@ -215,8 +216,6 @@ namespace FitnessChallengeApp.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ChallengeId");
 
                     b.ToTable("UserRatings");
                 });
@@ -358,24 +357,6 @@ namespace FitnessChallengeApp.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("FitnessChallengeApp.Models.UserChallenge", b =>
-                {
-                    b.HasOne("FitnessChallengeApp.Models.Challenge", null)
-                        .WithMany("UserChallenges")
-                        .HasForeignKey("ChallengeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("FitnessChallengeApp.Models.UserRating", b =>
-                {
-                    b.HasOne("FitnessChallengeApp.Models.Challenge", null)
-                        .WithMany("UserRatings")
-                        .HasForeignKey("ChallengeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -425,13 +406,6 @@ namespace FitnessChallengeApp.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("FitnessChallengeApp.Models.Challenge", b =>
-                {
-                    b.Navigation("UserChallenges");
-
-                    b.Navigation("UserRatings");
                 });
 #pragma warning restore 612, 618
         }

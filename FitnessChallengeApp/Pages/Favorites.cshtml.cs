@@ -29,7 +29,14 @@ namespace FitnessChallengeApp.Pages
 
             Favorites = await _context.Favorites
                 .Where(f => f.UserId == userId)
-                .Select(f => new Favorite { Id = f.ChallengeId, Title = _context.Challenges.Find(f.ChallengeId).Title })
+                .Join(_context.Challenges, 
+                      f => f.ChallengeId, 
+                      c => c.Id, 
+                      (f, c) => new Favorite 
+                      { 
+                          Id = f.ChallengeId, 
+                          Title = c.Title 
+                      })
                 .ToListAsync();
         }
     }

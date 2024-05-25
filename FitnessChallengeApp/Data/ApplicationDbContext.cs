@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using FitnessChallengeApp.Models;
 
+
 namespace FitnessChallengeApp.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

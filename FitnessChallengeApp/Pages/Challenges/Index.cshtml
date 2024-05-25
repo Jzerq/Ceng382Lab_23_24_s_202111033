@@ -11,30 +11,23 @@
     <input type="text" name="keyword" value="@Model.Keyword" class="form-control mr-2" placeholder="Keyword" />
     <select name="difficulty" class="form-control mr-2">
         <option value="">-- Select Difficulty --</option>
-        @{
-            var difficulties = new[] { "Easy", "Medium", "Hard" };
-            foreach (var difficulty in difficulties)
-            {
-                var selected = Model.Difficulty == difficulty ? "selected" : null;
-                <option value="@difficulty" selected="@selected">@difficulty</option>
-            }
+        @foreach (var difficulty in new[] { "Easy", "Medium", "Hard" })
+        {
+            <option value="@difficulty" selected="@(Model.Difficulty == difficulty ? "selected" : null)">@difficulty</option>
         }
     </select>
     <select name="category" class="form-control mr-2">
         <option value="">-- Select Category --</option>
-        @{
-            var categories = new[] { "Steps", "WeightLoss", "Cardio", "Strength", "Running", "Muscle" };
-            foreach (var category in categories)
-            {
-                var selected = Model.Category == category ? "selected" : null;
-                <option value="@category" selected="@selected">@category</option>
-            }
+        @foreach (var category in new[] { "Steps", "WeightLoss", "Cardio", "Strength", "Running", "Muscle" })
+        {
+            <option value="@category" selected="@(Model.Category == category ? "selected" : null)">@category</option>
         }
     </select>
     <button type="submit" class="btn btn-primary">Search</button>
 </form>
 
 <div>
+    <a href="/Challenges/Create" class="btn btn-success mb-3">Create New Challenge</a>
     @foreach (var challenge in Model.Challenges)
     {
         <div class="card mb-3">
@@ -42,14 +35,32 @@
                 <h5 class="card-title">@challenge.Title</h5>
                 <p class="card-text">@challenge.Description</p>
                 <p class="card-text"><small class="text-muted">@challenge.Category</small></p>
-                @if (challenge.CreatedBy == User?.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value)
+                @if (Model.UserChallenges.Any(uc => uc.ChallengeId == challenge.Id && uc.UserId == User.FindFirst(ClaimTypes.NameIdentifier)?.Value))
                 {
-                    <a href="/Challenges/Edit/@challenge.Id" class="btn btn-primary">Edit</a>
-                    <a href="/Challenges/Delete/@challenge.Id" class="btn btn-danger">Delete</a>
+                    <a href="/Challenges/Leave/@challenge.Id" class="btn btn-warning">Leave</a>
                 }
                 else
                 {
                     <a href="/Challenges/Join/@challenge.Id" class="btn btn-success">Join</a>
+                }
+                @if (Model.Favorites.Any(f => f.ChallengeId == challenge.Id && f.UserId == User.FindFirst(ClaimTypes.NameIdentifier)?.Value))
+                {
+                    <form method="post" asp-page-handler="RemoveFavorite" asp-route-id="@challenge.Id" class="d-inline">
+                        <button type="submit" class="btn btn-secondary btn-sm">Remove from Favorites</button>
+                    </form>
+                }
+                else
+                {
+                    <form method="post" asp-page-handler="AddFavorite" asp-route-id="@challenge.Id" class="d-inline">
+                        <button type="submit" class="btn btn-info btn-sm">Add to Favorites</button>
+                    </form>
+                }
+                <a href="/Challenges/Details/@challenge.Id" class="btn btn-info">Details</a>
+                
+                @if (Model.ChallengeCreators.ContainsKey(challenge.Id) && Model.ChallengeCreators[challenge.Id] == User.FindFirst(ClaimTypes.NameIdentifier)?.Value)
+                {
+                    <a href="/Challenges/Edit/@challenge.Id" class="btn btn-primary">Edit</a>
+                    <a href="/Challenges/Delete/@challenge.Id" class="btn btn-danger">Delete</a>
                 }
             </div>
         </div>
@@ -58,7 +69,7 @@
 
 <style>
     .challenges {
-        background-image: url('/images/challenges-background.jpg');
+        background-image: url('/images/challenges-background.png');
         background-size: cover;
         background-attachment: fixed;
     }

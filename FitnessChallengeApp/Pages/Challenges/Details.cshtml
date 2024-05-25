@@ -5,31 +5,81 @@
     ViewData["BodyClass"] = "challenges";
 }
 
-<h1>@Model.Challenge.Title</h1>
-<p>@Model.Challenge.Description</p>
-<p>Category: @Model.Challenge.Category</p>
-<p>Difficulty: @Model.Challenge.DifficultyLevel</p>
+@if (Model.Challenge != null)
+{
+    <h1>@Model.Challenge.Title</h1>
+    <p>@Model.Challenge.Description</p>
+    <p>Category: @Model.Challenge.Category</p>
+    <p>Difficulty: @Model.Challenge.DifficultyLevel</p>
 
-<h2>Leaderboard</h2>
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>Rank</th>
-            <th>Username</th>
-            <th>Points</th>
-        </tr>
-    </thead>
-    <tbody>
-    @for (int i = 0; i < Model.Leaderboard.Count; i++)
-    {
-        <tr>
-            <td>@(i + 1)</td>
-            <td>@Model.Leaderboard[i].Username</td>
-            <td>@Model.Leaderboard[i].Points</td>
-        </tr>
+    <h2>Rate this Challenge</h2>
+    <form method="post" asp-page-handler="Rate">
+        <div class="form-group">
+            <label asp-for="Rating.Rating"></label>
+            <select asp-for="Rating.Rating" class="form-control">
+                @for (int i = 1; i <= 5; i++)
+                {
+                    <option value="@i">@i</option>
+                }
+            </select>
+            <span asp-validation-for="Rating.Rating" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Rating.Comment"></label>
+            <textarea asp-for="Rating.Comment" class="form-control"></textarea>
+            <span asp-validation-for="Rating.Comment" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Rating</button>
+    </form>
+
+    <h2>Past Ratings</h2>
+    <div>
+        @foreach (var rating in Model.Ratings)
+        {
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">@rating.Username</h5>
+                    <p class="card-text">Rating: @rating.Rating</p>
+                    <p class="card-text">@rating.Comment</p>
+                </div>
+            </div>
+        }
+    </div>
+
+    <h2>Leaderboard</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Username</th>
+                <th>Points</th>
+            </tr>
+        </thead>
+        <tbody>
+        @for (int i = 0; i < Model.Leaderboard.Count; i++)
+        {
+            <tr>
+                <td>@(i + 1)</td>
+                <td>@Model.Leaderboard[i].Username</td>
+                <td>@Model.Leaderboard[i].Points</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+    <a asp-page="/Challenges/Join" asp-route-id="@Model.Challenge.Id" class="btn btn-success">Join Challenge</a>
+    <a asp-page="/Challenges/Leave" asp-route-id="@Model.Challenge.Id" class="btn btn-secondary">Leave Challenge</a>
+}
+else
+{
+    <h1>Challenge not found</h1>
+    <p>The challenge you are looking for does not exist.</p>
+}
+
+<style>
+    .challenges {
+        background-image: url('/images/challenges-background.png');
+        background-size: cover;
+        background-attachment: fixed;
     }
-    </tbody>
-</table>
-
-<a asp-page="/Challenges/Join" asp-route-id="@Model.Challenge.Id" class="btn btn-success">Join Challenge</a>
-<a asp-page="/Challenges/Leave" asp-route-id="@Model.Challenge.Id" class="btn btn-secondary">Leave Challenge</a>
+</style>

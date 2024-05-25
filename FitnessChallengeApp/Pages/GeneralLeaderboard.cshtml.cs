@@ -28,7 +28,7 @@ namespace FitnessChallengeApp.Pages
                 .GroupBy(uc => uc.UserId)
                 .Select(g => new LeaderboardEntry
                 {
-                    Username = _context.Users.Find(g.Key).UserName,
+                    Username = _context.Users.Where(u => u.Id == g.Key).Select(u => u.UserName).FirstOrDefault(),
                     TotalPoints = g.Sum(uc => uc.Points)
                 })
                 .OrderByDescending(le => le.TotalPoints)

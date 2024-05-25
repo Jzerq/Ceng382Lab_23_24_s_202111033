@@ -1,5 +1,5 @@
 @page
-@model ServiceMenuModel
+@model FitnessChallengeApp.Pages.ServiceMenuModel
 @{
     ViewData["Title"] = "Service Menu";
     ViewData["BodyClass"] = "service-menu";
@@ -11,29 +11,29 @@
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">Challenges</h5>
-            <p class="card-text">Browse and join various fitness challenges to stay motivated.</p>
-            <a href="@Url.Page("/Challenges/Index")" class="btn btn-primary">View Challenges</a>
+            <p class="card-text">Browse, join and create various fitness challenges to stay motivated.</p>
+            <a href="/Challenges/Index" class="btn btn-primary">View Challenges</a>
         </div>
     </div>
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">Leaderboard</h5>
             <p class="card-text">Check the leaderboard to see how you rank against other users.</p>
-            <a href="@Url.Page("/Leaderboard")" class="btn btn-primary">View Leaderboard</a>
+            <a href="/Leaderboard" class="btn btn-primary">View Leaderboard</a>
         </div>
     </div>
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">General Leaderboard</h5>
             <p class="card-text">View the overall leaderboard for all challenges combined.</p>
-            <a href="@Url.Page("/GeneralLeaderboard")" class="btn btn-primary">View General Leaderboard</a>
+            <a href="/GeneralLeaderboard" class="btn btn-primary">View General Leaderboard</a>
         </div>
     </div>
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">Favorites</h5>
             <p class="card-text">Manage your favorite challenges.</p>
-            <a href="@Url.Page("/Favorites")" class="btn btn-primary">View Favorites</a>
+            <a href="/Favorites" class="btn btn-primary">View Favorites</a>
         </div>
     </div>
 </div>

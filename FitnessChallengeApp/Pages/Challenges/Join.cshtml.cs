@@ -1,32 +1,25 @@
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using FitnessChallengeApp.Data;
 using FitnessChallengeApp.Models;
-using System;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace FitnessChallengeApp.Pages.Challenges
 {
-    [Authorize]
     public class JoinModel : PageModel
     {
         private readonly ApplicationDbContext _context;
-        private readonly UserManager<ApplicationUser> _userManager;
 
-        public JoinModel(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
+        public JoinModel(ApplicationDbContext context)
         {
             _context = context;
-            _userManager = userManager;
         }
 
-        [BindProperty]
         public Challenge Challenge { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int id)
         {
-            ViewData["BodyClass"] = "challenges";
             Challenge = await _context.Challenges.FindAsync(id);
 
             if (Challenge == null)
@@ -39,26 +32,23 @@ namespace FitnessChallengeApp.Pages.Challenges
 
         public async Task<IActionResult> OnPostAsync(int id)
         {
-            var challenge = await _context.Challenges.FindAsync(id);
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
-            if (challenge == null)
-            {
-                return NotFound();
-            }
+            var random = new Random();
+            var points = random.Next(1, 101);
 
-            var user = await _userManager.GetUserAsync(User);
             var userChallenge = new UserChallenge
             {
-                UserId = user.Id,
                 ChallengeId = id,
-                JoinDate = DateTime.Now,
-                Points = 0
+                UserId = userId,
+                Points = points,   
+                JoinDate = DateTime.Now
             };
 
             _context.UserChallenges.Add(userChallenge);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("/Challenges/Index");
         }
     }
 }

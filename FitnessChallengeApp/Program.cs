@@ -13,7 +13,7 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 // Add Identity services and configure ApplicationUser
 builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddRoles<IdentityRole>() 
+    .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
 builder.Services.AddRazorPages();
@@ -36,7 +36,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthentication(); // Ensure this is added
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapRazorPages();
