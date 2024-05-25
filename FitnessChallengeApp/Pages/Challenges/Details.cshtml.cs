@@ -68,13 +68,6 @@ namespace FitnessChallengeApp.Pages.Challenges
 
         public async Task<IActionResult> OnPostRateAsync(int id)
         {
-            var challenge = await _context.Challenges.FindAsync(id);
-            if (challenge == null)
-            {
-                _logger.LogWarning("Challenge with ID {Id} not found.", id);
-                return NotFound("The challenge you are looking for does not exist.");
-            }
-
             if (!ModelState.IsValid)
             {
                 return Page();
@@ -83,9 +76,20 @@ namespace FitnessChallengeApp.Pages.Challenges
             var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             Rating.UserId = userId;
             Rating.ChallengeId = id;
+            Rating.Username = User.Identity.Name;
 
             _context.UserRatings.Add(Rating);
             await _context.SaveChangesAsync();
+
+            // Adding the new rating to the current Ratings collection to display immediately
+            Ratings.Add(new UserRating
+            {
+                UserId = userId,
+                ChallengeId = id,
+                Rating = Rating.Rating,
+                Comment = Rating.Comment,
+                Username = Rating.Username
+            });
 
             return RedirectToPage("/Challenges/Details", new { id });
         }

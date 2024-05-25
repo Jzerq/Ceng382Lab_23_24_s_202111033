@@ -13,7 +13,7 @@
     <p>Difficulty: @Model.Challenge.DifficultyLevel</p>
 
     <h2>Rate this Challenge</h2>
-    <form method="post" asp-page-handler="Rate">
+    <form method="post" asp-page-handler="Rate" asp-route-id="@Model.Challenge.Id">
         <div class="form-group">
             <label asp-for="Rating.Rating"></label>
             <select asp-for="Rating.Rating" class="form-control">
