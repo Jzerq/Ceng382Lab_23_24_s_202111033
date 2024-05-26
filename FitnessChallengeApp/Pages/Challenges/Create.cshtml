@@ -4,7 +4,7 @@
     ViewData["Title"] = "Create Challenge";
 }
 
-<h1>Create Challenge</h1>
+<h1 class=".text-black">Create Challenge</h1>
 
 @if (TempData["SuccessMessage"] != null)
 {
@@ -15,18 +15,18 @@
 
 <form method="post">
     <div class="form-group">
-        <label asp-for="Challenge.Title"></label>
-        <input asp-for="Challenge.Title" class="form-control" />
+        <label asp-for="Challenge.Title" class="text-white"></label>
+        <input asp-for="Challenge.Title" class="form-control text-white bg-dark" />
         <span asp-validation-for="Challenge.Title" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Challenge.Description"></label>
-        <textarea asp-for="Challenge.Description" class="form-control"></textarea>
+        <label asp-for="Challenge.Description" class="text-white"></label>
+        <textarea asp-for="Challenge.Description" class="form-control text-white bg-dark"></textarea>
         <span asp-validation-for="Challenge.Description" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Challenge.Category"></label>
-        <select asp-for="Challenge.Category" class="form-control">
+        <label asp-for="Challenge.Category" class="text-white"></label>
+        <select asp-for="Challenge.Category" class="form-control bg-dark text-white">
             <option value="">-- Select Category --</option>
             @{
                 var categories = new[] { "Steps", "WeightLoss", "Cardio", "Strength", "Running", "Muscle" };
@@ -39,8 +39,8 @@
         <span asp-validation-for="Challenge.Category" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Challenge.DifficultyLevel"></label>
-        <select asp-for="Challenge.DifficultyLevel" class="form-control">
+        <label asp-for="Challenge.DifficultyLevel" class="text-white"></label>
+        <select asp-for="Challenge.DifficultyLevel" class="form-control bg-dark text-white">
             <option value="">-- Select Difficulty --</option>
             @{
                 var difficulties = new[] { "Easy", "Medium", "Hard" };
@@ -64,5 +64,18 @@
         background-image: url('/images/challenges-background.png');
         background-size: cover;
         background-attachment: fixed;
+    }
+    .text-white {
+        color: white !important;
+    }
+    .text-black{
+        color: black !important;
+    }
+    .form-control.bg-dark {
+        background-color: #333;
+        color: white;
+    }
+    .form-control.bg-dark::placeholder {
+        color: white;
     }
 </style>

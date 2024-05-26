@@ -24,19 +24,43 @@ namespace FitnessChallengeApp.Pages
         {
             ViewData["BodyClass"] = "leaderboard";
 
-            Leaderboard = await _context.UserChallenges
+            var userChallenges = await _context.UserChallenges
                 .GroupBy(uc => uc.UserId)
-                .Select(g => new LeaderboardEntry
+                .Select(g => new
                 {
-                    Username = _context.Users.Where(u => u.Id == g.Key).Select(u => u.UserName).FirstOrDefault(),
+                    UserId = g.Key,
                     TotalPoints = g.Sum(uc => uc.Points)
                 })
-                .OrderByDescending(le => le.TotalPoints)
+                .OrderByDescending(g => g.TotalPoints)
                 .ToListAsync();
+
+            Leaderboard = userChallenges.Select(uc => new LeaderboardEntry
+            {
+                UserId = uc.UserId,
+                TotalPoints = uc.TotalPoints
+            }).ToList();
+
+            AssignGenericUsernames();
+        }
+
+        private void AssignGenericUsernames()
+        {
+            var userMapping = new Dictionary<string, string>();
+            int userCounter = 1;
+
+            foreach (var entry in Leaderboard)
+            {
+                if (!userMapping.ContainsKey(entry.UserId))
+                {
+                    userMapping[entry.UserId] = $"User{userCounter++}";
+                }
+                entry.Username = userMapping[entry.UserId];
+            }
         }
 
         public class LeaderboardEntry
         {
+            public string UserId { get; set; }
             public string Username { get; set; }
             public int TotalPoints { get; set; }
         }

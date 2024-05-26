@@ -15,8 +15,8 @@
     <h2>Rate this Challenge</h2>
     <form method="post" asp-page-handler="Rate" asp-route-id="@Model.Challenge.Id">
         <div class="form-group">
-            <label asp-for="Rating.Rating"></label>
-            <select asp-for="Rating.Rating" class="form-control">
+            <label asp-for="Rating.Rating" class="white-text"></label>
+            <select asp-for="Rating.Rating" class="form-control dark-dropdown">
                 @for (int i = 1; i <= 5; i++)
                 {
                     <option value="@i">@i</option>
@@ -25,11 +25,15 @@
             <span asp-validation-for="Rating.Rating" class="text-danger"></span>
         </div>
         <div class="form-group">
-            <label asp-for="Rating.Comment"></label>
-            <textarea asp-for="Rating.Comment" class="form-control"></textarea>
+            <label asp-for="Rating.Comment" class="white-text"></label>
+            <textarea asp-for="Rating.Comment" class="form-control white-text"></textarea>
             <span asp-validation-for="Rating.Comment" class="text-danger"></span>
         </div>
         <button type="submit" class="btn btn-primary">Submit Rating</button>
+    </form>
+
+    <form method="post" asp-page-handler="SaveChallenge" asp-route-id="@Model.Challenge.Id">
+        <button type="submit" class="btn btn-secondary mt-3">Save Challenge</button>
     </form>
 
     <h2>Past Ratings</h2>
@@ -81,5 +85,23 @@ else
         background-image: url('/images/challenges-background.png');
         background-size: cover;
         background-attachment: fixed;
+    }
+    .white-text {
+        color: white !important;
+    }
+    .form-control.white-text {
+        background-color: transparent;
+        color: white;
+    }
+    .form-control.white-text::placeholder {
+        color: white;
+    }
+    .dark-dropdown {
+        background-color: #333;
+        color: white;
+    }
+    .dark-dropdown option {
+        background-color: #333;
+        color: white;
     }
 </style>

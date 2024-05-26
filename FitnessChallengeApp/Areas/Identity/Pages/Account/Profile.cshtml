@@ -9,12 +9,12 @@
 
 <form method="post" enctype="multipart/form-data">
     <div class="form-group">
-        <label asp-for="Bio"></label>
-        <textarea asp-for="Bio" class="form-control"></textarea>
+        <label asp-for="Bio" class="text-white"></label>
+        <textarea asp-for="Bio" class="form-control white-textarea"></textarea>
         <span asp-validation-for="Bio" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Photo"></label>
+        <label asp-for="Photo" class="text-white"></label>
         <input type="file" asp-for="Photo" class="form-control-file" />
         <span asp-validation-for="Photo" class="text-danger"></span>
     </div>
@@ -29,10 +29,56 @@
     </div>
 }
 
+<h2>Saved Challenges</h2>
+@if (Model.SavedChallenges != null && Model.SavedChallenges.Any())
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var challenge in Model.SavedChallenges)
+        {
+            <tr>
+                <td><a asp-page="/Challenges/Details" asp-route-id="@challenge.ChallengeId">@challenge.Title</a></td>
+                <td>
+                    <form method="post" asp-page-handler="DeleteSavedChallenge" asp-route-id="@challenge.Id" class="d-inline">
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No challenges saved yet.</p>
+}
+
 <style>
     .profile {
         background-image: url('/images/profile-background.png');
         background-size: cover;
         background-attachment: fixed;
+    }
+    .text-white {
+        color: white !important;
+    }
+    .white-textarea {
+        background-color: transparent;
+        color: white;
+    }
+    .white-textarea::placeholder {
+        color: white;
+    }
+    .table {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    .btn-sm {
+        font-size: 0.875em;
     }
 </style>

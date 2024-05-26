@@ -19,6 +19,6 @@ namespace FitnessChallengeApp.Models
 
         public string Comment { get; set; }
 
-        public string Username { get; set; }
+        //public string Username { get; set; }
     }
 }
