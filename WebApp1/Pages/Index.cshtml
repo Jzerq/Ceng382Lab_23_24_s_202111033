@@ -1,10 +1,107 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApp1</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+        body {
+            background: url('/images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        .container {
+            background-color: rgba(59, 7, 7, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+        .display-4 {
+            color: #ffcc00;
+        }
+        p {
+            color: #ddd;
+        }
+        .btn-primary {
+            background-color: #ffcc00;
+            border-color: #ffcc00;
+            color: #000;
+        }
+        .btn-primary:hover {
+            background-color: #e6b800;
+            border-color: #e6b800;
+        }
+        .features {
+            margin-top: 40px;
+        }
+        .features h3 {
+            color: #ffcc00;
+        }
+        .features p {
+            color: #ddd;
+        }
+        .feature-link {
+            text-decoration: none;
+            color: inherit;
+        }
+        .feature-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <h1 class="display-4">Welcome to WebApp1</h1>
+        <p class="lead">Your ultimate solution for room reservations and user management.</p>
+        <a class="btn btn-primary btn-lg" href="/CreateReservation" role="button">Get Started</a>
+        
+        <div class="features text-left">
+            <h3 class="mt-5">Key Features:</h3>
+            <ul class="list-unstyled">
+                <li>
+                    <a href="/Account/Register" class="feature-link">
+                        <h4>User Registration and Login</h4>
+                        <p>Register new users and login securely with complex, hashed passwords.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/UserProfile" class="feature-link">
+                        <h4>User Profile Management</h4>
+                        <p>View and edit user profiles, including profile pictures and descriptions.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/RoomList" class="feature-link">
+                        <h4>Room Management</h4>
+                        <p>Add, edit, and list rooms with detailed descriptions and photos.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/CreateReservation" class="feature-link">
+                        <h4>Reservation System</h4>
+                        <p>Make reservations for available rooms with an easy-to-use interface.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/MyReservations" class="feature-link">
+                        <h4>Booking History</h4>
+                        <p>View past and current reservations with options to edit or cancel.</p>
+                    </a>
+                </li>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

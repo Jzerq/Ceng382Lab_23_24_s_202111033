@@ -1,14 +1,15 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using WebApp1.Data; 
-using  WebApp1.Models; 
+using WebApp1.Models;
+
 public class RoomListModel : PageModel
 {
-    private readonly WebAppDataBaseContext _context;
+    private readonly WebAppDatabaseContext _context;
 
-    public RoomListModel(WebAppDataBaseContext context)
+    public RoomListModel(WebAppDatabaseContext context)
     {
         _context = context;
     }

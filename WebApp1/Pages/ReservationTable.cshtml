@@ -28,27 +28,90 @@
     </form>
 </div>
 
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>Room</th>
-            <th>Date and Time</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var reservation in Model.Reservations)
-        {
-            <tr>
-                <td>@reservation.Room.RoomName</td>
-                <td>@reservation.DateTime</td>
-                <td>
-                    <a href="/EditReservation?id=@reservation.Id" class="btn btn-sm btn-warning">Edit</a>
-                    <form method="post" asp-page-handler="Delete" asp-route-id="@reservation.Id" style="display:inline;">
-                        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
-                    </form>
-                </td>
-            </tr>
+<div class="calendar-section">
+    <div class="calendar-header">
+        @{
+            var startOfWeek = Model.StartOfWeek;
+            for (int i = 0; i < 7; i++)
+            {
+                <div class="calendar-header-day">@startOfWeek.AddDays(i).ToString("dddd, MMM dd")</div>
+            }
         }
-    </tbody>
-</table>
+    </div>
+    <div class="calendar-body">
+        @{
+            for (int hour = 0; hour < 24; hour++)
+            {
+                <div class="calendar-hour">
+                    <div class="calendar-hour-label">@hour:00</div>
+                    @for (int day = 0; day < 7; day++)
+                    {
+                        var currentDate = startOfWeek.AddDays(day);
+                        var reservations = Model.GetReservationsForTime(currentDate, hour);
+                        <div class="calendar-cell">
+                            @foreach (var reservation in reservations)
+                            {
+                                <div class="reservation">
+                                    @reservation.Room.RoomName
+                                    <div>
+                                        <a href="/EditReservation?id=@reservation.Id" class="btn btn-sm btn-warning">Edit</a>
+                                        <form method="post" asp-page-handler="Delete" asp-route-id="@reservation.Id" style="display:inline;">
+                                            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                </div>
+            }
+        }
+    </div>
+</div>
+
+<style>
+    .filter-section, .calendar-section {
+        margin-bottom: 20px;
+    }
+    .calendar-header {
+        display: flex;
+        justify-content: space-between;
+    }
+    .calendar-header-day {
+        flex: 1;
+        text-align: center;
+        font-weight: bold;
+    }
+    .calendar-body {
+        display: flex;
+        flex-direction: column;
+    }
+    .calendar-hour {
+        display: flex;
+        align-items: center;
+    }
+    .calendar-hour-label {
+        width: 50px;
+        text-align: right;
+        padding-right: 10px;
+    }
+    .calendar-cell {
+        flex: 1;
+        border: 1px solid #ddd;
+        min-height: 50px;
+        position: relative;
+    }
+    .reservation {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 123, 255, 0.5);
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    .btn-warning, .btn-danger {
+        margin-top: 5px;
+    }
+</style>

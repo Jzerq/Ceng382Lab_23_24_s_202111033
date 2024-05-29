@@ -17,99 +17,107 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebApp1
 build_property.RootNamespace = WebApp1
-build_property.ProjectDir = C:\Users\doguk\OneDrive\Masaüstü\dotnmetlab\Ceng382Lab_23_24_s_202111033-4\WebApp1\
+build_property.ProjectDir = C:\Users\doguk\OneDrive\Masaüstü\dotnmetlab\Ceng382Lab_23_24_s_202111033-9\WebApp1\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\doguk\OneDrive\Masaüstü\dotnmetlab\Ceng382Lab_23_24_s_202111033-4\WebApp1
+build_property.MSBuildProjectDirectory = C:\Users\doguk\OneDrive\Masaüstü\dotnmetlab\Ceng382Lab_23_24_s_202111033-9\WebApp1
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-4/WebApp1/Areas/Identity/Pages/Account/Login.cshtml]
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-9/WebApp1/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-4/WebApp1/Areas/Identity/Pages/Account/Logout.cshtml]
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-9/WebApp1/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-4/WebApp1/Areas/Identity/Pages/Account/Register.cshtml]
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-9/WebApp1/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-4/WebApp1/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-9/WebApp1/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3RlckNvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-4/WebApp1/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-9/WebApp1/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-4/WebApp1/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-9/WebApp1/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-4/WebApp1/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-9/WebApp1/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-4/WebApp1/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-9/WebApp1/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-4/WebApp1/Pages/AddRoom.cshtml]
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-9/WebApp1/Pages/AddRoom.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkUm9vbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-4/WebApp1/Pages/CreateReservation.cshtml]
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-9/WebApp1/Pages/CreateReservation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlUmVzZXJ2YXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-4/WebApp1/Pages/EditRoom.cshtml]
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-9/WebApp1/Pages/EditRoom.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFJvb20uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-4/WebApp1/Pages/Error.cshtml]
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-9/WebApp1/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-4/WebApp1/Pages/Index.cshtml]
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-9/WebApp1/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-4/WebApp1/Pages/Privacy.cshtml]
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-9/WebApp1/Pages/MyReservations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXlSZXNlcnZhdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-9/WebApp1/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-4/WebApp1/Pages/ReservationService.cshtml]
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-9/WebApp1/Pages/ReservationService.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzZXJ2YXRpb25TZXJ2aWNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-4/WebApp1/Pages/ReservationTable.cshtml]
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-9/WebApp1/Pages/ReservationTable.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzZXJ2YXRpb25UYWJsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-4/WebApp1/Pages/RoomList.cshtml]
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-9/WebApp1/Pages/RoomList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9vbUxpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-4/WebApp1/Pages/Shared/_LoginPartial.cshtml]
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-9/WebApp1/Pages/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-4/WebApp1/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-9/WebApp1/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-4/WebApp1/Pages/_ViewImports.cshtml]
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-9/WebApp1/Pages/UserProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-9/WebApp1/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-4/WebApp1/Pages/_ViewStart.cshtml]
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-9/WebApp1/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-4/WebApp1/Pages/Shared/_Layout.cshtml]
+[C:/Users/doguk/OneDrive/Masaüstü/dotnmetlab/Ceng382Lab_23_24_s_202111033-9/WebApp1/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-k18sh7oufj

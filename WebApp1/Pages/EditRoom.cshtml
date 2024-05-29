@@ -7,7 +7,7 @@
 <h1>Edit Room</h1>
 
 <form method="post">
-    <input type="hidden" asp-for="Room.Id" />
+    <input type="hidden" asp-for="Room.RoomId" /> <!-- Corrected property name -->
     <div class="form-group">
         <label asp-for="Room.RoomName" class="control-label"></label>
         <input asp-for="Room.RoomName" class="form-control" />

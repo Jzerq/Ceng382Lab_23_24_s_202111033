@@ -2,16 +2,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
-using WebApp1.Data; 
-
-using  WebApp1.Models; 
+using WebApp1.Data;
+using WebApp1.Models;
 
 public class AddRoomModel : PageModel
 {
     private readonly ILogger<AddRoomModel> _logger;
-    private readonly WebAppDataBaseContext _context;
+    private readonly WebAppDatabaseContext _context;
 
-    public AddRoomModel(ILogger<AddRoomModel> logger, WebAppDataBaseContext context) 
+    public AddRoomModel(ILogger<AddRoomModel> logger, WebAppDatabaseContext context)
     {
         _logger = logger;
         _context = context;

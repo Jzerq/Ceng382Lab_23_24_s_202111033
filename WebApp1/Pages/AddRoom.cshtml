@@ -4,6 +4,74 @@
     ViewData["Title"] = "Add Room";
 }
 
+<style>
+    body {
+        background-image: url('/images/background.jpg'); /* Update this with your image path */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin: 5% auto;
+        max-width: 500px;
+        padding: 20px;
+    }
+
+    .card-header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .card-header h1 {
+        font-size: 24px;
+        color: #333;
+    }
+
+    .form-label {
+        font-weight: bold;
+        color: #555;
+    }
+
+    .form-control {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .form-control:focus {
+        border-color: #80bdff;
+        box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #004085;
+    }
+
+    .text-danger {
+        font-size: 12px;
+    }
+</style>
+
 <div class="card">
     <div class="card-header">
         <h1>Add Room</h1>
@@ -19,6 +87,16 @@
                 <label asp-for="Room.Capacity" class="form-label"></label>
                 <input asp-for="Room.Capacity" class="form-control" />
                 <span asp-validation-for="Room.Capacity" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Room.PhotoUrl" class="form-label"></label>
+                <input asp-for="Room.PhotoUrl" class="form-control" />
+                <span asp-validation-for="Room.PhotoUrl" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Room.Description" class="form-label"></label>
+                <textarea asp-for="Room.Description" class="form-control"></textarea>
+                <span asp-validation-for="Room.Description" class="text-danger"></span>
             </div>
             <button type="submit" class="btn btn-primary">Add</button>
         </form>

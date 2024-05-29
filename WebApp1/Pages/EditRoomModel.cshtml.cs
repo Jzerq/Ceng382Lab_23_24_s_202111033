@@ -6,9 +6,9 @@ using WebApp1.Data;
 using  WebApp1.Models; 
 public class EditRoomModel : PageModel
 {
-    private readonly WebAppDataBaseContext _context;
+    private readonly WebAppDatabaseContext _context;
 
-    public EditRoomModel(WebAppDataBaseContext context)
+    public EditRoomModel(WebAppDatabaseContext context)
     {
         _context = context;
     }
@@ -28,6 +28,7 @@ public class EditRoomModel : PageModel
         return Page();
     }
 
+
     public async Task<IActionResult> OnPostAsync()
     {
         if (!ModelState.IsValid)
@@ -43,7 +44,7 @@ public class EditRoomModel : PageModel
         }
         catch (DbUpdateConcurrencyException)
         {
-            if (!RoomExists(Room.Id))
+            if (!RoomExists(Room.RoomId))
             {
                 return NotFound();
             }
@@ -58,6 +59,6 @@ public class EditRoomModel : PageModel
 
     private bool RoomExists(int id)
     {
-        return _context.Rooms.Any(e => e.Id == id);
+        return _context.Rooms.Any(e => e.RoomId == id);
     }
 }

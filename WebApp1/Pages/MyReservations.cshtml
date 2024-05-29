@@ -1,0 +1,120 @@
+@page
+@model MyReservationsModel
+@{
+    ViewData["Title"] = "My Reservations";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApp1</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+        body {
+            background: url('/images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        .container {
+            background-color: rgba(59, 7, 7, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .alert {
+            margin-top: 20px;
+        }
+        table {
+            background-color: #343a40;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        table thead {
+            background-color: #007bff;
+        }
+        table th, table td {
+            color: #fff;
+        }
+        .btn {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4 text-center">My Reservations</h2>
+
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+        }
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+        }
+
+        <h3>Current Reservations</h3>
+        <table class="table table-striped table-dark">
+            <thead>
+                <tr>
+                    <th>Reservation Name</th>
+                    <th>Room Name</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var reservation in Model.CurrentReservations)
+                {
+                    <tr>
+                        <td>@reservation.Name</td>
+                        <td>@reservation.Room.RoomName</td>
+                        <td>@reservation.StartTime</td>
+                        <td>@reservation.EndTime</td>
+                        <td>
+                            <a href="/EditReservation?id=@reservation.Id" class="btn btn-warning">Edit</a>
+                            <form method="post" asp-page-handler="Delete" asp-route-id="@reservation.Id" style="display:inline;">
+                                <button type="submit" class="btn btn-danger">Cancel</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <h3>Past Reservations</h3>
+        <table class="table table-striped table-dark">
+            <thead>
+                <tr>
+                    <th>Reservation Name</th>
+                    <th>Room Name</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var reservation in Model.PastReservations)
+                {
+                    <tr>
+                        <td>@reservation.Name</td>
+                        <td>@reservation.Room.RoomName</td>
+                        <td>@reservation.StartTime</td>
+                        <td>@reservation.EndTime</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
