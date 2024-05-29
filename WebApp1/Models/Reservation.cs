@@ -17,5 +17,5 @@ public partial class Reservation
 
     public string? UserId { get; set; }
 
-    public virtual Room Room { get; set; } = null!;
+    public virtual Room? Room { get; set; }
 }
